@@ -1,6 +1,8 @@
 import { AppBar, Box, Button, Container, IconButton, Toolbar, Menu, MenuItem } from "@mui/material";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+
 import { useState } from "react";
 
 export function AppNavBar() {
@@ -54,7 +56,7 @@ export function AppNavBar() {
                                 mb: 1 // un pequeño margen inferior
                             }}
                         >
-                            {/* Redes sociales */}
+
                             <Box display="flex" gap={1}>
                                 <IconButton
                                     href="https://www.facebook.com/flowmach#"
@@ -74,11 +76,11 @@ export function AppNavBar() {
                                     sx={{
                                         bgcolor: "grey.700",
                                         color: "white",
-                                        "&:hover": { bgcolor: "grey.500" },
+                                        "&:hover": { color:"black", bgcolor: "grey.500" },
                                         p: 1
                                     }}
                                 >
-                                    <FaTwitter size={18} />
+                                    <FaSquareXTwitter size={18} />
                                 </IconButton>
                                 <IconButton
                                     href="https://www.youtube.com/channel/UCiwvF1J73ghwpwW6wI5nEpQ"
@@ -86,7 +88,7 @@ export function AppNavBar() {
                                     sx={{
                                         bgcolor: "grey.700",
                                         color: "white",
-                                        "&:hover": { bgcolor: "grey.500" },
+                                        "&:hover": { color:"red", bgcolor: "grey.500" },
                                         p: 1
                                     }}
                                 >
@@ -98,7 +100,7 @@ export function AppNavBar() {
                                     sx={{
                                         bgcolor:"grey.700",
                                         color: "white",
-                                        "&:hover":{bgcolor:"grey.500"}
+                                        "&:hover":{  color:"forestgreen",bgcolor:"grey.500"}
                                     }}
                                 >
                                     <FaWhatsapp size={18}/>

@@ -26,6 +26,7 @@ export function Layout(){
                                 objectFit: "cover", // para que siempre llene
                                 top: 0,
                                 left: 0,
+                                backgroundColor: "rgba(0, 0, 0, 0.1)",
                                 zIndex: -1, // detrás del contenido
                             }}
                             src={"./src/assets/home/bk.mp4"}
@@ -34,10 +35,14 @@ export function Layout(){
                             alignItems:"center",
                             marginTop:"auto",
                             marginBottom:"auto",
+                            backgroundColor: "rgba(0, 0, 0, 0.4)",
+                            padding: 2,
+                            borderRadius: 2,
+                            color: "white"
                         }}>
                             <h1>FLOWMACH</h1>
                             <span>
-                                Tratamiento, reutilización y ahorro de agua de proceso y residual. Protección del medio ambiente
+                              TRATAMIENTO DE EFLUENTES INDUSTRIALES
                             </span>
                         </Container>
                     </Box>

@@ -1,6 +1,7 @@
 import { Box, Typography, Grid, Container, IconButton, Link } from "@mui/material";
 import { LocationOn, Phone, Email } from "@mui/icons-material";
-import { FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaYoutube } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 const FooterBar: React.FC = () => {
     return (
@@ -33,16 +34,13 @@ const FooterBar: React.FC = () => {
                         </Box>
                         <Box display="flex" alignItems="center" mb={1}>
                             <Phone sx={{ mr: 1 }} />
-                            <Typography variant="body2">Teléfono 1: +51 1 389 3039</Typography>
+                            <Typography variant="body2">Teléfono: +51 13893039 </Typography>
                         </Box>
                         <Box display="flex" alignItems="center" mb={1}>
                             <Phone sx={{ mr: 1 }} />
-                            <Typography variant="body2">Teléfono 2: +51 946 087 611</Typography>
+                            <Typography variant="body2">Celular : +51 998 362 309</Typography>
                         </Box>
-                        <Box display="flex" alignItems="center" mb={1}>
-                            <Phone sx={{ mr: 1 }} />
-                            <Typography variant="body2">Teléfono 3: +51 997 722 917</Typography>
-                        </Box>
+
                         <Box display="flex" alignItems="center" mb={1}>
                             <Email sx={{ mr: 1 }} />
                             <Typography variant="body2">
@@ -68,14 +66,14 @@ const FooterBar: React.FC = () => {
                             <IconButton
                                 href="https://x.com/flowmachsac"
                                 target="_blank"
-                                sx={{ bgcolor: "grey.700", color: "white", "&:hover": { bgcolor: "grey.500" } }}
+                                sx={{ bgcolor: "grey.700", color: "white", "&:hover": { color:"black",bgcolor: "grey.500" } }}
                             >
-                                <FaTwitter size={20} />
+                                <FaSquareXTwitter size={20} />
                             </IconButton>
                             <IconButton
                                 href="https://www.youtube.com/channel/UCiwvF1J73ghwpwW6wI5nEpQ"
                                 target="_blank"
-                                sx={{ bgcolor: "grey.700", color: "white", "&:hover": { bgcolor: "red.500" } }}
+                                sx={{ bgcolor: "grey.700", color: "white", "&:hover": { color: "red" ,bgcolor: "grey.500" } }}
                             >
                                 <FaYoutube size={20} />
                             </IconButton>
