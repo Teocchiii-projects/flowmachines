@@ -75,7 +75,7 @@ const FooterBar: React.FC = () => {
                             <IconButton
                                 href="https://www.youtube.com/channel/UCiwvF1J73ghwpwW6wI5nEpQ"
                                 target="_blank"
-                                sx={{ bgcolor: "grey.700", color: "white", "&:hover": { bgcolor: "grey.500" } }}
+                                sx={{ bgcolor: "grey.700", color: "white", "&:hover": { bgcolor: "red.500" } }}
                             >
                                 <FaYoutube size={20} />
                             </IconButton>

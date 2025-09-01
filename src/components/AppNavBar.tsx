@@ -1,6 +1,6 @@
 import { AppBar, Box, Button, Container, IconButton, Toolbar, Menu, MenuItem } from "@mui/material";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { useState } from "react";
 
 export function AppNavBar() {
@@ -25,7 +25,7 @@ export function AppNavBar() {
                     top: 0,
                     left: 0,
                     width: "100%",
-                    zIndex: 10,
+                    zIndex: 10
                 }}
             >
                 <Toolbar sx={{ bgcolor: "transparent" }}>
@@ -37,10 +37,11 @@ export function AppNavBar() {
                         sx={{
                             mr: 5,
                             bgcolor: "white",
-                            padding: 2,
+                            padding: 1.5,
+
                         }}
                     >
-                        <img src={"./src/assets/home/0000018261IM01.jpg"} width={150} height={100} />
+                        <img src={"./src/assets/home/0000018261IM01.jpg"} width={100} height={50} />
                     </IconButton>
 
                     <Container sx={{ display: "flex", flexDirection: "column" }}>
@@ -91,6 +92,17 @@ export function AppNavBar() {
                                 >
                                     <FaYoutube size={18} />
                                 </IconButton>
+                                <IconButton
+                                    href=""
+                                    target="_blank"
+                                    sx={{
+                                        bgcolor:"grey.700",
+                                        color: "white",
+                                        "&:hover":{bgcolor:"grey.500"}
+                                    }}
+                                >
+                                    <FaWhatsapp size={18}/>
+                                </IconButton>
                             </Box>
 
                             {/* Número de teléfono */}
@@ -137,7 +149,7 @@ export function AppNavBar() {
                             <Button component={Link} to={"/treatment"} color="inherit">
                                 Tratamiento de aguas residuales
                             </Button>
-                            <Button component={Link} to={"/aboutus"} color="inherit">
+                            <Button component={Link} to={"/about"} color="inherit">
                                 Nosotros
                             </Button>
                             <Button component={Link} to={"/contact"} color="inherit">
