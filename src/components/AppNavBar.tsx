@@ -1,6 +1,6 @@
 import { AppBar, Box, Button, Container, IconButton, Toolbar, Menu, MenuItem } from "@mui/material";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
 import { useState } from "react";
