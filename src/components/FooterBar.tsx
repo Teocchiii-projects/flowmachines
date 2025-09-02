@@ -1,7 +1,8 @@
-import { Box, Typography, Grid, Container, IconButton, Link } from "@mui/material";
+import { Box, Typography, Container, IconButton, Link } from "@mui/material";
 import { LocationOn, Phone, Email } from "@mui/icons-material";
 import { FaFacebookF, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import Grid from "@mui/material/Grid";
 
 const FooterBar: React.FC = () => {
     return (
