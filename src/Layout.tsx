@@ -29,7 +29,7 @@ export function Layout(){
                                 backgroundColor: "rgba(0, 0, 0, 0.1)",
                                 zIndex: -1, // detrás del contenido
                             }}
-                            src={"./src/assets/home/bk.mp4"}
+                            src={"./public/home/bk.mp4"}
                         />
                         <Container sx={{
                             alignItems:"center",

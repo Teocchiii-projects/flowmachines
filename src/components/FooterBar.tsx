@@ -19,9 +19,9 @@ const FooterBar: React.FC = () => {
         >
             <Container>
                 <img
-                    src={"./src/assets/home/0000018267IM01.jpg"}
+                    src={"./public/home/0000018267IM01.jpg"}
                     alt={"asociados"}
-                    style={{ maxWidth: "200px" }}
+                    style={{ maxWidth: "2000px" }}
                 />
             </Container>
 
