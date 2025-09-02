@@ -43,7 +43,7 @@ export function AppNavBar() {
 
                         }}
                     >
-                        <img src={"./public/home/0000018261IM01.jpg"} width={100} height={50} />
+                        <img src={"/public/home/0000018261IM01.jpg"} width={100} height={50} />
                     </IconButton>
 
                     <Container sx={{ display: "flex", flexDirection: "column" }}>

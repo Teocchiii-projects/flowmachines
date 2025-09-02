@@ -2,7 +2,7 @@ import { Box, Typography, Container, IconButton, Link } from "@mui/material";
 import { LocationOn, Phone, Email } from "@mui/icons-material";
 import { FaFacebookF, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-
+import associates from "/public/home/0000018267IM01.jpg";
 const FooterBar: React.FC = () => {
     return (
         <Box
@@ -10,6 +10,7 @@ const FooterBar: React.FC = () => {
             sx={{
                 position: "absolute", // si quieres que siempre quede abajo, puedes usar "fixed"
                 left: 0,
+                right:0,
                 width: "100%",
                 bgcolor: "#111",
                 color: "white",
@@ -19,7 +20,7 @@ const FooterBar: React.FC = () => {
         >
             <Container>
                 <img
-                    src={"./public/home/0000018267IM01.jpg"}
+                    src={associates}
                     alt={"asociados"}
                     style={{ maxWidth: "2000px" }}
                 />
