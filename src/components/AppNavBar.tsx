@@ -2,7 +2,7 @@ import { AppBar, Box, Button, Container, IconButton, Toolbar, Menu, MenuItem } f
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-
+import logo from "/public/home/0000018261IM01.jpg";
 import { useState } from "react";
 
 export function AppNavBar() {
@@ -43,7 +43,7 @@ export function AppNavBar() {
 
                         }}
                     >
-                        <img src={"/public/home/0000018261IM01.jpg"} width={100} height={50} />
+                        <img src={logo} width={100} height={50} />
                     </IconButton>
 
                     <Container sx={{ display: "flex", flexDirection: "column" }}>
