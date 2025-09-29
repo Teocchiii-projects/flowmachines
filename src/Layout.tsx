@@ -4,10 +4,11 @@ import {Outlet} from "react-router-dom";
 import {Box, Container} from "@mui/material";
 import FooterBar from "./components/FooterBar.tsx";
 import covervideo from "/public/home/bk.mp4";
+
 export function Layout(){
     return(
         <>
-            <Container>
+            
                 <header>
                     <AppNavBar/>
                 </header>
@@ -46,18 +47,14 @@ export function Layout(){
                             </span>
                         </Container>
                     </Box>
-                    <Container sx={{
-                        padding:1,
-                        marginTop:-10
-                    }}>
+                    <Container>
                         <Outlet/>
                     </Container>
 
                 </main>
-                <footer>
+                <footer >
                     <FooterBar/>
                 </footer>
-            </Container>
 
         </>
     )

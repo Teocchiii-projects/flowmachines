@@ -4,7 +4,7 @@ import { FaFacebookF, FaWhatsapp, FaYoutube, FaBars } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import logo from "/public/home/0000018261IM01.jpg";
 import { useState } from "react";
-
+//TODO: Cambia el color, preferiblemente establece un tema para poder alternar
 export function AppNavBar() {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -50,16 +50,17 @@ export function AppNavBar() {
             <AppBar
                 position="static"
                 sx={{
-                    bgColor: "black",
                     opacity: 0.9,
                     position: "fixed",
                     top: 0,
                     left: 0,
                     width: "100%",
-                    zIndex: 10
+                    zIndex: 10,
+                    backgroundColor: "#5862ed"
                 }}
+                
             >
-                <Toolbar sx={{ bgcolor: "transparent", minHeight: { xs: 64, md: 80 } }}>
+                <Toolbar sx={{  minHeight: { xs: 64, md: 80 } }}>
                     <IconButton
                         color="inherit"
                         aria-label="menu"
@@ -67,8 +68,8 @@ export function AppNavBar() {
                         to={"/"}
                         sx={{
                             mr: { xs: 2, md: 5 },
-                            bgcolor: "white",
-                            padding: { xs: 1, md: 1.5 }
+                            bgcolor: "blue",
+                            padding: { xs: 1, md: 2 }
                         }}
                     >
                         <img
@@ -79,8 +80,8 @@ export function AppNavBar() {
                         />
                     </IconButton>
 
-                    {isMobile ? (
-                        // Mobile Layout
+                       
+                    {isMobile ? ( //Mobile menu
                         <>
                             <Box sx={{ flexGrow: 1 }} />
                             <IconButton
@@ -92,7 +93,8 @@ export function AppNavBar() {
                             </IconButton>
                         </>
                     ) : (
-                        // Desktop Layout
+
+                        //Full Menu for Desktop
                         <Container sx={{ display: "flex", flexDirection: "column" }}>
                             <Box
                                 sx={{
