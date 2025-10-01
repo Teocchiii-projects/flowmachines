@@ -5,13 +5,15 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 //TODO: El footer se mueve constantemente, depende del outlet, aseguralo con un position absolute
 const FooterBar: React.FC = () => {
     return (
-        <Container
-            component="footer"
-            sx={{
-                width:"100%",
-                bgcolor: "#111",
+        <div
+          
+            style={{
+                position:"static",
+                width:"100hv",
+                backgroundColor: "#111",
                 color: "white",
-                py: { xs: 3, md: 5 },
+                padding: "20px 0",
+                marginTop: "auto",
             }}
         >
            
@@ -110,7 +112,7 @@ const FooterBar: React.FC = () => {
                     </Box>
                 </Box>
             </Container>
-        </Container>
+        </div>
     );
 };
 

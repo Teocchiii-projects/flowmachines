@@ -9,7 +9,9 @@ import FooterBar from './components/FooterBar.tsx';
 
 export function Layout() {
   return (
-    <>
+  <div>
+
+
       <header>
         <AppNavBar />
       </header>
@@ -42,24 +44,23 @@ export function Layout() {
               alignItems: "center",
               marginTop: "auto",
               marginBottom: "auto",
-              backgroundColor: "rgba(0, 0, 0, 0.4)",
+              backgroundColor: "rgba(255, 255, 255, 0.7)",
               padding: 2,
               borderRadius: 2,
               color: "white",
             }}
           >
-            <h1>FLOWMACH</h1>
-            <span>TRATAMIENTO DE EFLUENTES INDUSTRIALES</span>
+            <h1 style={{ color: "#2b4894" }}>FLOWMACH</h1>
+            <span style={{ color: "#2b4894" }}>TRATAMIENTO DE EFLUENTES INDUSTRIALES</span>
           </Container>
         </Box>
-
-        <Container>
+    
           <Outlet />
-        </Container>
       </main>
 
-      <FooterBar />
-     </>
+    
+     <FooterBar />
+       </div>
   );
  
   

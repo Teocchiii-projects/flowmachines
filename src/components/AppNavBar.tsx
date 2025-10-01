@@ -121,7 +121,7 @@ export function AppNavBar() {
                                     color="inherit"
                                     aria-controls={anchorEl ? "products-menu" : undefined}
                                     aria-haspopup="true"
-                                    onClick={handleMenuOpen}   // 👈 ahora abre el menú al hacer click
+                                    onClick={handleMenuOpen}   
                                 >
                                     Productos ▼
                                 </Button>

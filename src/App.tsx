@@ -20,7 +20,21 @@ const router = createBrowserRouter([
             {path:"/", element:<Home/>},
             {path:"/contact", element:<ContactUs/>},
             {path:"/treatment", element:<ResidualWaterTreatment/>},
-            {path:"/products",element:<Products/>},
+            
+            {
+            path: "/products",
+            element: <Products />,
+            children: [
+                { path: "decantadores-centrifugos", element: <Products /> },
+                { path: "planta-tratamiento-aguas-residuales-industriales", element: <Products /> },
+                { path: "maquina-preparadora-sulfato-ferrico", element: <Products /> },
+                { path: "maquina-preparadora-polimeros", element: <Products /> },
+                { path: "sistema-homogenizacion-eductores-tanque-ecualizador", element: <Products /> },
+                { path: "sistema-generacion-microburbujas-flotacion", element: <Products /> },
+                { path: "bombas-centrifugas-mezcladores-estaticos", element: <Products /> },
+            ],
+            },
+
             {path:"/about",element:<AboutUs/>},
             {path:"*",element:<NotFound/>}
 
