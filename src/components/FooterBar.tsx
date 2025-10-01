@@ -2,7 +2,6 @@ import { Box, Typography, Container, IconButton, Link } from "@mui/material";
 import { LocationOn, Phone, Email } from "@mui/icons-material";
 import { FaFacebookF, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import associates from "/public/home/0000018267IM01.jpg";
 //TODO: El footer se mueve constantemente, depende del outlet, aseguralo con un position absolute
 const FooterBar: React.FC = () => {
     return (
@@ -15,19 +14,7 @@ const FooterBar: React.FC = () => {
                 py: { xs: 3, md: 5 },
             }}
         >
-            {/*Asociados !!Sujeto a cambios*/}
-            <Container>
-                <img
-                    src={associates}
-                    alt="asociados"
-                    style={{
-                        maxWidth: "100%",
-                        height: "auto",
-                        display: "block",
-                        margin: "0 auto",
-                    }}
-                />
-            </Container>
+           
 
             {/* Secciones */}
             <Container maxWidth="lg" sx={{ mt: { xs: 2, md: 3 } }}>
@@ -128,3 +115,4 @@ const FooterBar: React.FC = () => {
 };
 
 export default FooterBar;
+

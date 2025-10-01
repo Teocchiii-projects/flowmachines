@@ -1,0 +1,9 @@
+.MuiButton-root{
+    text-transform: none;
+    color: #2b4894;
+    
+}
+.MuiButton-root:hover{
+    color: white;
+    background-color: #2b4894;
+}

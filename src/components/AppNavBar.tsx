@@ -2,9 +2,24 @@ import { AppBar, Box, Button, Container, IconButton, Toolbar, Menu, MenuItem, Dr
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaWhatsapp, FaYoutube, FaBars } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import logo from "/public/home/0000018261IM01.jpg";
+import logo from "/public/assets/home/0000018261IM01.jpg";
 import { useState } from "react";
-//TODO: Cambia el color, preferiblemente establece un tema para poder alternar
+import type { ButtonProps } from "@mui/material";
+import './ComponentStyles.css';
+
+// Sobrescritura de boton
+ const CustomButton = (props: ButtonProps) => (
+  <Button
+    {...props}
+    sx={{
+      backgroundColor: "#1976d2",
+      color: "#fff",
+      "&:hover": { backgroundColor: "#115293" },
+      ...props.sx, // permite sobrescribir
+    }}
+  />
+);
+
 export function AppNavBar() {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -56,19 +71,18 @@ export function AppNavBar() {
                     left: 0,
                     width: "100%",
                     zIndex: 10,
-                    backgroundColor: "#5862ed"
+                    backgroundColor: "white"
                 }}
                 
             >
                 <Toolbar sx={{  minHeight: { xs: 64, md: 80 } }}>
                     <IconButton
-                        color="inherit"
+                        color="secondary"
                         aria-label="menu"
                         component={Link}
                         to={"/"}
                         sx={{
                             mr: { xs: 2, md: 5 },
-                            bgcolor: "blue",
                             padding: { xs: 1, md: 2 }
                         }}
                     >
@@ -96,69 +110,7 @@ export function AppNavBar() {
 
                         //Full Menu for Desktop
                         <Container sx={{ display: "flex", flexDirection: "column" }}>
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    justifyContent: "flex-end",
-                                    alignItems: "center",
-                                    gap: 2,
-                                    mb: 1
-                                }}
-                            >
-                                <Box display="flex" gap={1}>
-                                    <IconButton
-                                        href="https://www.facebook.com/flowmach#"
-                                        target="_blank"
-                                        sx={{
-                                            bgcolor: "grey.700",
-                                            color: "white",
-                                            "&:hover": { bgcolor: "grey.500" },
-                                            p: 1
-                                        }}
-                                    >
-                                        <FaFacebookF size={18} />
-                                    </IconButton>
-                                    <IconButton
-                                        href="https://x.com/flowmachsac"
-                                        target="_blank"
-                                        sx={{
-                                            bgcolor: "grey.700",
-                                            color: "white",
-                                            "&:hover": { color:"black", bgcolor: "grey.500" },
-                                            p: 1
-                                        }}
-                                    >
-                                        <FaSquareXTwitter size={18} />
-                                    </IconButton>
-                                    <IconButton
-                                        href="https://www.youtube.com/channel/UCiwvF1J73ghwpwW6wI5nEpQ"
-                                        target="_blank"
-                                        sx={{
-                                            bgcolor: "grey.700",
-                                            color: "white",
-                                            "&:hover": { color:"red", bgcolor: "grey.500" },
-                                            p: 1
-                                        }}
-                                    >
-                                        <FaYoutube size={18} />
-                                    </IconButton>
-                                    <IconButton
-                                        href=""
-                                        target="_blank"
-                                        sx={{
-                                            bgcolor:"grey.700",
-                                            color: "white",
-                                            "&:hover":{ color:"forestgreen",bgcolor:"grey.500"}
-                                        }}
-                                    >
-                                        <FaWhatsapp size={18}/>
-                                    </IconButton>
-                                </Box>
-
-                                <Box sx={{ color: "white", fontWeight: "bold" }}>
-                                    +511 389 3039
-                                </Box>
-                            </Box>
+                            
 
                             <Box sx={{ ml: "auto", display: "flex", gap: 2 }}>
                                 <Button component={Link} to={"/"} color="inherit">
@@ -198,9 +150,11 @@ export function AppNavBar() {
                                 <Button component={Link} to={"/about"} color="inherit">
                                     Nosotros
                                 </Button>
-                                <Button component={Link} to={"/contact"} color="inherit">
-                                    Contáctenos
-                                </Button>
+                                <CustomButton component={Link} {...{ to: "/contact" }}>
+                                        Contactenos
+                                </CustomButton>
+                               
+                                
                             </Box>
                         </Container>
                     )}
