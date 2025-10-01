@@ -3,22 +3,9 @@ import { Link } from "react-router-dom";
 import { FaFacebookF, FaWhatsapp, FaYoutube, FaBars } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import logo from "/public/assets/home/0000018261IM01.jpg";
-import { useState } from "react";
-import type { ButtonProps } from "@mui/material";
+import { useState } from "react";   
 import './ComponentStyles.css';
 
-// Sobrescritura de boton
- const CustomButton = (props: ButtonProps) => (
-  <Button
-    {...props}
-    sx={{
-      backgroundColor: "#1976d2",
-      color: "#fff",
-      "&:hover": { backgroundColor: "#115293" },
-      ...props.sx, // permite sobrescribir
-    }}
-  />
-);
 
 export function AppNavBar() {
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -44,21 +31,33 @@ export function AppNavBar() {
         setMobileProductsOpen(!mobileProductsOpen);
     };
 
+
     const mobileMenuItems = [
         { label: "Home", path: "/" },
+        { label: "Productos", path: "/products" },
         { label: "Tratamiento de aguas residuales", path: "/treatment" },
         { label: "Nosotros", path: "/about" },
         { label: "Contáctenos", path: "/contact" }
     ];
 
     const productItems = [
-        "Filtros Industriales",
         "Decantadores Centrífugos",
-        "Polímeros Floculantes y Coagulantes",
-        "Enzimas y Bacterias",
-        "Bombas para Agua",
-        "Mezcladores de Polímero"
+        "Planta de Tratamiento de Aguas Residuales e Industriales",
+        "Máquina Preparadora de Sulfato Férrico",
+        "Máquina Preparadora de Polímeros",
+        "Sistema de Homogenización por Eductores para Tanque Ecualizador",
+        "Sistema de Generación de Microburbujas para Flotación",
+        "Bombas Centrífugas y Mezcladores Estáticos"
     ];
+
+    const normalizePath = (str: string) => 
+  str
+    .normalize("NFD")               // separa letra de la tilde
+    .replace(/[\u0300-\u036f]/g, "")// elimina las tildes
+    .toLowerCase()
+    .replace(/\s+/g, "-");          // espacios por guiones
+
+
 
     return (
         <>
@@ -117,31 +116,35 @@ export function AppNavBar() {
                                     Home
                                 </Button>
 
-                                <Box onMouseEnter={handleMenuOpen}>
-                                    <Button
-                                        color="inherit"
-                                        aria-controls={anchorEl ? "products-menu" : undefined}
-                                        aria-haspopup="true"
-                                  
+                                <Box>
+                                <Button
+                                    color="inherit"
+                                    aria-controls={anchorEl ? "products-menu" : undefined}
+                                    aria-haspopup="true"
+                                    onClick={handleMenuOpen}   // 👈 ahora abre el menú al hacer click
+                                >
+                                    Productos ▼
+                                </Button>
+                                <Menu
+                                    id="products-menu"
+                                    anchorEl={anchorEl}
+                                    open={Boolean(anchorEl)}
+                                    onClose={handleMenuClose}
+                                >
+                                    {productItems.map((item) => (
+                                    <MenuItem
+                                        key={item}
+                                        component={Link}  
+                                        to={`/products/${normalizePath(item)}`}
+                                        onClick={handleMenuClose}
                                     >
-                                        Productos ▼
-                                    </Button>
-                                    <Menu
-                                        id="products-menu"
-                                        anchorEl={anchorEl}
-                                        open={Boolean(anchorEl)}
-                                        onClose={handleMenuClose}
-                                        MenuListProps={{
-                                            onMouseLeave: handleMenuClose,
-                                        }}
-                                    >
-                                        {productItems.map((item) => (
-                                            <MenuItem key={item} onClick={handleMenuClose}>
-                                                {item}
-                                            </MenuItem>
-                                        ))}
-                                    </Menu>
+                                        {item}
+                                    </MenuItem>
+                                    ))}
+                                </Menu>
                                 </Box>
+
+                               
 
                                 <Button component={Link} to={"/treatment"} color="inherit">
                                     Tratamiento de aguas residuales

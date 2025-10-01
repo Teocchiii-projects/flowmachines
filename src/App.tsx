@@ -10,6 +10,7 @@ import {Layout} from "./Layout.tsx";
 import {AboutUs} from "./pages/AboutUs.tsx";
 import {ResidualWaterTreatment} from "./pages/ResidualWaterTreatment.tsx";
 import {NotFound} from "./pages/NotFound.tsx";
+import { Products } from './pages/Products.tsx';
 
 const router = createBrowserRouter([
     {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
             {path:"/", element:<Home/>},
             {path:"/contact", element:<ContactUs/>},
             {path:"/treatment", element:<ResidualWaterTreatment/>},
+            {path:"/products",element:<Products/>},
             {path:"/about",element:<AboutUs/>},
             {path:"*",element:<NotFound/>}
 
