@@ -122,8 +122,7 @@ export function AppNavBar() {
                                         color="inherit"
                                         aria-controls={anchorEl ? "products-menu" : undefined}
                                         aria-haspopup="true"
-                                        component={Link}
-                                        to={"/products"}
+                                  
                                     >
                                         Productos ▼
                                     </Button>
@@ -150,11 +149,10 @@ export function AppNavBar() {
                                 <Button component={Link} to={"/about"} color="inherit">
                                     Nosotros
                                 </Button>
-                                <CustomButton component={Link} {...{ to: "/contact" }}>
+                                <Button className={"contact-button"}component={Link} to={"/contact"} color="inherit">
                                         Contactenos
-                                </CustomButton>
-                               
-                                
+                                </Button>
+
                             </Box>
                         </Container>
                     )}
