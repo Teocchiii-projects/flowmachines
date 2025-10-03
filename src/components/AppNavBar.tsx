@@ -1,7 +1,5 @@
 import { AppBar, Box, Button, Container, IconButton, Toolbar, Menu, MenuItem, Drawer, List, ListItem, ListItemText, useMediaQuery, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaWhatsapp, FaYoutube, FaBars } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
 import logo from "/public/assets/home/0000018261IM01.jpg";
 import { useState } from "react";   
 import './ComponentStyles.css';
@@ -35,7 +33,6 @@ export function AppNavBar() {
     const mobileMenuItems = [
         { label: "Home", path: "/" },
         { label: "Productos", path: "/products" },
-        { label: "Tratamiento de aguas residuales", path: "/treatment" },
         { label: "Nosotros", path: "/about" },
         { label: "Contáctenos", path: "/contact" }
     ];
@@ -145,16 +142,19 @@ export function AppNavBar() {
                                 </Box>
 
                                
-
-                                <Button component={Link} to={"/treatment"} color="inherit">
-                                    Tratamiento de aguas residuales
-                                </Button>
-                                <Button component={Link} to={"/about"} color="inherit">
+                               <Box
+                               sx={{justifyContent:"left", display:"flex", alignItems:"center"}}>
+                                  <Button component={Link} to={"/about"} color="inherit" sx={{mr:20}}>
                                     Nosotros
                                 </Button>
+                               
                                 <Button className={"contact-button"}component={Link} to={"/contact"} color="inherit">
                                         Contactenos
                                 </Button>
+                               </Box>
+
+
+                              
 
                             </Box>
                         </Container>
@@ -177,61 +177,7 @@ export function AppNavBar() {
                 }}
             >
                 <Box sx={{ p: 2 }}>
-                    {/* Social Media Icons */}
-                    <Box sx={{ display: "flex", gap: 1, mb: 2, justifyContent: "center" }}>
-                        <IconButton
-                            href="https://www.facebook.com/flowmach#"
-                            target="_blank"
-                            sx={{
-                                bgcolor: "grey.700",
-                                color: "white",
-                                "&:hover": { bgcolor: "grey.500" },
-                                p: 1
-                            }}
-                        >
-                            <FaFacebookF size={16} />
-                        </IconButton>
-                        <IconButton
-                            href="https://x.com/flowmachsac"
-                            target="_blank"
-                            sx={{
-                                bgcolor: "grey.700",
-                                color: "white",
-                                "&:hover": { color:"black", bgcolor: "grey.500" },
-                                p: 1
-                            }}
-                        >
-                            <FaSquareXTwitter size={16} />
-                        </IconButton>
-                        <IconButton
-                            href="https://www.youtube.com/channel/UCiwvF1J73ghwpwW6wI5nEpQ"
-                            target="_blank"
-                            sx={{
-                                bgcolor: "grey.700",
-                                color: "white",
-                                "&:hover": { color:"red", bgcolor: "grey.500" },
-                                p: 1
-                            }}
-                        >
-                            <FaYoutube size={16} />
-                        </IconButton>
-                        <IconButton
-                            href=""
-                            target="_blank"
-                            sx={{
-                                bgcolor:"grey.700",
-                                color: "white",
-                                "&:hover":{ color:"forestgreen",bgcolor:"grey.500"}
-                            }}
-                        >
-                            <FaWhatsapp size={16}/>
-                        </IconButton>
-                    </Box>
-
-                    {/* Phone Number */}
-                    <Box sx={{ textAlign: "center", mb: 3, fontWeight: "bold" }}>
-                        +511 389 3039
-                    </Box>
+                 
 
                     <List>
                         {mobileMenuItems.map((item) => (

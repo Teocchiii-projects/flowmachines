@@ -8,7 +8,6 @@ import {ContactUs} from "./pages/ContactUs.tsx";
 import {Home} from "./pages/Home.tsx";
 import {Layout} from "./Layout.tsx";
 import {AboutUs} from "./pages/AboutUs.tsx";
-import {ResidualWaterTreatment} from "./pages/ResidualWaterTreatment.tsx";
 import {NotFound} from "./pages/NotFound.tsx";
 import { Products } from './pages/Products.tsx';
 
@@ -19,7 +18,6 @@ const router = createBrowserRouter([
         children:[
             {path:"/", element:<Home/>},
             {path:"/contact", element:<ContactUs/>},
-            {path:"/treatment", element:<ResidualWaterTreatment/>},
             
             {
             path: "/products",
