@@ -2,31 +2,34 @@ import { Box, Typography, Container, IconButton, Link } from "@mui/material";
 import { LocationOn, Phone, Email } from "@mui/icons-material";
 import { FaFacebookF, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-//TODO: El footer se mueve constantemente, depende del outlet, aseguralo con un position absolute
 const FooterBar: React.FC = () => {
     return (
-        <div
-          
-            style={{
-                position:"static",
-                width:"100hv",
+        <Box
+            component="footer"
+            sx={{
+                width: "100%",
                 backgroundColor: "#111",
                 color: "white",
-                padding: "20px 0",
-                marginTop: "auto",
+                py: 3,
+                mt: "auto",
+                position: "relative",
+                bottom: 0,
+                left: 0,
+                right: 0,
+                margin: 0,
+                padding: 0,
+                boxSizing: "border-box",
             }}
         >
-           
-
             {/* Secciones */}
-            <Container maxWidth="lg" sx={{ mt: { xs: 2, md: 3 } }}>
+            <Container maxWidth="lg" sx={{ py: 3 }}>
                 <Box
                     sx={{
-                        display: "flex",
-                        flexDirection: { xs: "column", md: "row" },
-                        justifyContent: "space-between",
-                        alignItems: { xs: "flex-start", md: "flex-start" },
-                        gap: { xs: 3, md: 6 },
+                          display: "flex",
+                            flexDirection: { xs: "column", md: "row" },
+                            justifyContent: "space-between",
+                            alignItems: { xs: "flex-start", md: "flex-start" },
+                            gap: { xs: 3, md: 6 },
                     }}
                 >
                     {/* Contacto */}
@@ -112,7 +115,7 @@ const FooterBar: React.FC = () => {
                     </Box>
                 </Box>
             </Container>
-        </div>
+        </Box>
     );
 };
 

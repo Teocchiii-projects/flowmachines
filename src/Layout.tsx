@@ -9,9 +9,13 @@ import FooterBar from './components/FooterBar.tsx';
 
 export function Layout() {
   return (
-  <div>
-
-
+  <Box
+    sx={{
+      minHeight: "100vh",
+      display: "flex",
+      flexDirection: "column"
+    }}
+  >
       <header>
         <AppNavBar />
       </header>
@@ -50,17 +54,16 @@ export function Layout() {
               color: "white",
             }}
           >
-            <h1 style={{ color: "#2b4894" }}>FLOWMACH</h1>
-            <span style={{ color: "#2b4894" }}>TRATAMIENTO DE EFLUENTES INDUSTRIALES</span>
+            <h1 >FLOWMACH</h1>
+            <h2>TRATAMIENTO DE EFLUENTES INDUSTRIALES</h2>
           </Container>
         </Box>
     
           <Outlet />
       </main>
 
-    
      <FooterBar />
-       </div>
+  </Box>
   );
  
   
