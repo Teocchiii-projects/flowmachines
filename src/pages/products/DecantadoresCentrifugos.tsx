@@ -1,5 +1,5 @@
 // TODO: PRIMERO A COMPLETAR
-
+/*
 type Row = {
   category: string;
   details: string[];
@@ -45,7 +45,7 @@ const rows: Row[] = [
     ],
   },
 ];
-
+*/
 
 
 export default function DecantadoresCentrifugos() {
