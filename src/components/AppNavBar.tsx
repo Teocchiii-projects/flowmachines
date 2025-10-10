@@ -1,6 +1,7 @@
 import { AppBar, Box, Button, Container, IconButton, Toolbar, Menu, MenuItem, Drawer, List, ListItem, ListItemText, useMediaQuery, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
-import logo from "/public/assets/home/0000018261IM01.jpg";
+import { FaBars } from "react-icons/fa";
+
 import { useState } from "react";   
 import './ComponentStyles.css';
 
@@ -83,10 +84,14 @@ export function AppNavBar() {
                         }}
                     >
                         <img
-                            src={logo}
+                            src="/flowlogo.svg"
                             width={isMobile ? 80 : 100}
                             height={isMobile ? 40 : 50}
                             alt="Logo"
+                            style={{
+                                filter:
+                                "invert(18%) sepia(54%) saturate(1822%) hue-rotate(216deg) brightness(93%) contrast(89%)",
+                            }}
                         />
                     </IconButton>
 

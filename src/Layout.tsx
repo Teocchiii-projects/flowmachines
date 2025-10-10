@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import { Box, Container } from "@mui/material";
 import covervideo from "/public/assets/home/bk.mp4";
 import FooterBar from './components/FooterBar.tsx';
-import Clients from './components/Clients.tsx';
+import AnimatedLogo from "./components/AnimatedLogo.tsx";
 
 
 
@@ -55,11 +55,10 @@ export function Layout() {
               color: "white",
             }}
           >
-            <h1 >FLOWMACH</h1>
+            <AnimatedLogo/>
             <h2>TRATAMIENTO DE EFLUENTES INDUSTRIALES</h2>
           </Container>
         </Box>
-        <Clients/>
     
           <Outlet />
       </main>
