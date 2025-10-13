@@ -35,25 +35,28 @@ export default function Clients(){
             boxShadow: 3,
           }}
         >
-            <h2 style={{textAlign:"center", marginBottom:16}}>Nuestros Clientes</h2>
-           <span>
-                En <strong>FLOWMACH</strong> nos enorgullece ser aliados estratégicos de las principales empresas del 
-                sector pesquero e industrial. Nuestro compromiso con la<strong> eficiencia, puntualidad y 
-                atención personalizada 24/7 </strong> nos ha convertido en un socio confiable para proyectos de 
-                gran escala y operaciones críticas 
-            </span>
-             <br/>
+            <Container sx={{}}>
+                <h2 style={{textAlign:"center", marginBottom:16}}>Nuestros Clientes</h2>
             <span>
-                Cada cliente que confía en nosotros respalda nuestra<strong> experiencia técnica y capacidad 
-                de respuesta inmediata</strong>, garantizando soluciones seguras, de calidad y adaptadas a cada 
-                necesidad.
-            </span>
-            <br/>
-            <span>
-                Nos motiva construir relaciones sólidas basadas en <strong>la confianza, el acompañamiento 
-                constante y resultados comprobados</strong>, porque sabemos que cuando nuestros clientes 
-                crecen, nosotros crecemos con ellos.
-            </span>
+                    En <strong>FLOWMACH</strong> nos enorgullece ser aliados estratégicos de las principales empresas del 
+                    sector pesquero e industrial. Nuestro compromiso con la<strong> eficiencia, puntualidad y 
+                    atención personalizada 24/7 </strong> nos ha convertido en un socio confiable para proyectos de 
+                    gran escala y operaciones críticas 
+                </span>
+                <br/>
+                <span>
+                    Cada cliente que confía en nosotros respalda nuestra<strong> experiencia técnica y capacidad 
+                    de respuesta inmediata</strong>, garantizando soluciones seguras, de calidad y adaptadas a cada 
+                    necesidad.
+                </span>
+                <br/>
+                <span>
+                    Nos motiva construir relaciones sólidas basadas en <strong>la confianza, el acompañamiento 
+                    constante y resultados comprobados</strong>, porque sabemos que cuando nuestros clientes 
+                    crecen, nosotros crecemos con ellos.
+                </span>
+    
+            </Container>
     
         <Grid container spacing={3} justifyContent={'center'} alignItems={'center'}>
         <Stack direction="row" spacing={3} justifyContent="center" alignItems="center" flexWrap="wrap">
@@ -61,7 +64,6 @@ export default function Clients(){
                 <Box
                     key={cliente.name}
                     component="a"
-                    href={cliente.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     sx={{

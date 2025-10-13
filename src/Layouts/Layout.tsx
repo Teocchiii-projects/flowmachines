@@ -1,10 +1,10 @@
-import './App.css';
-import { AppNavBar } from "./components/AppNavBar.tsx";
+import '../App.css';
+import { AppNavBar } from "../components/AppNavBar.tsx";
 import { Outlet } from "react-router-dom";
 import { Box, Container } from "@mui/material";
 import covervideo from "/public/assets/home/bk.mp4";
-import FooterBar from './components/FooterBar.tsx';
-import AnimatedLogo from "./components/AnimatedLogo.tsx";
+import FooterBar from '../components/FooterBar.tsx';
+import AnimatedLogo from "../components/AnimatedLogo.tsx";
 
 
 

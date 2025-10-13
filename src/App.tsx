@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider} from "react-router-dom";
 //Pages
 import {ContactUs} from "./pages/ContactUs.tsx";
 import {Home} from "./pages/Home.tsx";
-import {Layout} from "./Layout.tsx";
+import {Layout} from "./Layouts/Layout.tsx";
 import {AboutUs} from "./pages/AboutUs.tsx";
 import {NotFound} from "./pages/NotFound.tsx";
 import { Products } from './pages/Products.tsx';

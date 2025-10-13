@@ -154,7 +154,7 @@ export function AppNavBar() {
                                 </Button>
                                
                                 <Button className={"contact-button"}component={Link} to={"/contact"} color="inherit">
-                                        Contactenos
+                                        Contáctenos
                                 </Button>
                                </Box>
 

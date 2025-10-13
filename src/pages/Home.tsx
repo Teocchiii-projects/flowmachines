@@ -1,5 +1,5 @@
 import {Container} from "@mui/material";
-
+import Clients from '../components/Clients.tsx';
 export function Home(){
     return(
         <>
@@ -15,6 +15,7 @@ export function Home(){
                         justifyContent:"center"
 
                     }}>
+        <Clients/>
 
                     </Container>
                 </Container>
