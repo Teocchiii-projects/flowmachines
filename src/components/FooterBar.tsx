@@ -34,27 +34,25 @@ const FooterBar: React.FC = () => {
                 >
                     {/* Contacto */}
                     <Box flex={1}>
-                        <Typography variant="h6" gutterBottom sx={{ fontSize: { xs: "1.1rem", md: "1.25rem" } }}>
+                        <Typography variant="h6" gutterBottom sx={{ color:"white", fontSize: { xs: "1.1rem", md: "1.25rem" } }}>
                             Contáctanos
                         </Typography>
                         <Box display="flex" alignItems="flex-start" mb={1}>
                             <LocationOn sx={{ mr: 1, fontSize: { xs: 18, md: 24 } }} />
-                            <Typography variant="body2">
-                                Dirección: Av. Los Mangos Mz. A Lt. 8-A, Urb. Canto Grande,
-                                San Juan de Lurigancho, Lima, Perú
+                            <Typography variant="body2" sx={{color:"white"}}>Dirección: Av. Los Mangos Mz. A Lt. 8-A, Urb. Canto Grande, San Juan de Lurigancho, Lima, Perú
                             </Typography>
                         </Box>
                         <Box display="flex" alignItems="center" mb={1}>
                             <Phone sx={{ mr: 1, fontSize: { xs: 18, md: 24 } }} />
-                            <Typography variant="body2">Teléfono: +51 13893039</Typography>
+                            <Typography variant="body2" sx={{color:"white"}}>Teléfono: +51 13893039</Typography>
                         </Box>
                         <Box display="flex" alignItems="center" mb={1}>
                             <Phone sx={{ mr: 1, fontSize: { xs: 18, md: 24 } }} />
-                            <Typography variant="body2">Celular: +51 998 362 309</Typography>
+                            <Typography variant="body2" sx={{color:"white"}}>Celular: +51 998 362 309</Typography>
                         </Box>
                         <Box display="flex" alignItems="center" mb={1}>
                             <Email sx={{ mr: 1, fontSize: { xs: 18, md: 24 } }} />
-                            <Typography variant="body2">
+                            <Typography variant="body2" sx={{color:"white"}}>
                                 Email:{" "}
                                 <Link
                                     href="mailto:flowmach@flowmachperu.com"

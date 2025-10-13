@@ -56,7 +56,7 @@ export function Layout() {
             }}
           >
             <AnimatedLogo/>
-            <h2>TRATAMIENTO DE EFLUENTES INDUSTRIALES</h2>
+            <h4>TRATAMIENTO DE EFLUENTES INDUSTRIALES</h4>
           </Container>
         </Box>
     
