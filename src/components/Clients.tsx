@@ -1,6 +1,6 @@
 import { Box, Stack, Grid, Container} from "@mui/material";
 import Austral from "../../public/assets/components/clients/AustralGroup.png";
-import CFG from "../../public/assets/components/clients/cfg.png";
+import CFG from "../../public/assets/components/clients/CFG.png";
 import Condestable from "../../public/assets/components/clients/Condestable.png";
 import Copeinca from"../../public/assets/components/clients/Copeinca.jpeg";
 import Exalmar from "../../public/assets/components/clients/Exalmar.png";
