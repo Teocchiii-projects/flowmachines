@@ -5,6 +5,7 @@ import { Box, Container } from "@mui/material";
 import covervideo from "/public/assets/home/bk.mp4";
 import FooterBar from '../components/FooterBar.tsx';
 import AnimatedLogo from "../components/AnimatedLogo.tsx";
+import WhatsAppButton from "../components/WhatsappButton.tsx";
 
 
 
@@ -62,6 +63,7 @@ export function Layout() {
     
           <Outlet />
       </main>
+      <WhatsAppButton/>
 
      <FooterBar />
   </Box>
