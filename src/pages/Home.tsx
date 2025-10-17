@@ -15,7 +15,8 @@ export function Home(){
                         justifyContent:"center"
 
                     }}>
-        <Clients/>
+                        <Clients/>
+
 
                     </Container>
                 </Container>

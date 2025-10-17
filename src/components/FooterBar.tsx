@@ -21,7 +21,6 @@ const FooterBar: React.FC = () => {
                 boxSizing: "border-box",
             }}
         >
-            {/* Secciones */}
             <Container maxWidth="lg" sx={{ py: 3 }}>
                 <Box
                     sx={{
