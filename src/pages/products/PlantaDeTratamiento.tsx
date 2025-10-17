@@ -3,7 +3,7 @@ import { Box, Container, Typography, Grid, Paper } from "@mui/material";
 import img1 from "../../../public/assets/pages/products/ptari/Imagen1.png";
 import img2 from "../../../public/assets/pages/products/ptari/Imagen2.png";
 import img3 from "../../../public/assets/pages/products/ptari/Imagen3.png";
-import img4 from "../../../public/assets/pages/products/ptari/Imagen4.png";
+import img4 from "../../../public/assets/pages/products/ptari/Imagen4.png"
 export function  PlantaDeTratamiento() {
     return (
         <Box sx={{ bgcolor: "#ffffff", py: 5 }}>
@@ -80,7 +80,6 @@ export function  PlantaDeTratamiento() {
                     </Typography>
                 </Paper>
 
-                {/* Galería inferior */}
                 <Grid container spacing={2} justifyContent="center" display={"flex"} flexDirection={"row"}>
                     <Grid item xs={12} md={6}>
                         <img
@@ -103,6 +102,16 @@ export function  PlantaDeTratamiento() {
                                 boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
                             }}
                         />
+                        <img
+                            src={img4}
+                            alt="PTARI instalación 2"
+                            style={{
+                                maxWidth: "50%",
+                                borderRadius: 8,
+                                boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+                            }}
+                        />
+
                     </Grid>
                 </Grid>
 
