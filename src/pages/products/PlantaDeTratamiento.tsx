@@ -1,11 +1,15 @@
+/*
 import { Box, Container, Typography, Grid, Paper } from "@mui/material";
 //IMAGENES
 import img1 from "../../../public/assets/pages/products/ptari/Imagen1.png";
 import img2 from "../../../public/assets/pages/products/ptari/Imagen2.png";
 import img3 from "../../../public/assets/pages/products/ptari/Imagen3.png";
 import img4 from "../../../public/assets/pages/products/ptari/Imagen4.png"
+ */
 export function  PlantaDeTratamiento() {
     return (
+        <h1>Testing</h1>
+        /*
         <Box sx={{ bgcolor: "#ffffff", py: 5 }}>
             <Container
                 maxWidth="lg"
@@ -14,7 +18,6 @@ export function  PlantaDeTratamiento() {
                     color: "#002f6d",
                 }}
             >
-                {/* Encabezado */}
                 <Typography
                     variant="h4"
                     align="center"
@@ -31,7 +34,6 @@ export function  PlantaDeTratamiento() {
                     PLANTA DE TRATAMIENTO DE AGUAS RESIDUALES E INDUSTRIALES
                 </Typography>
 
-                {/* Descripción inicial */}
                 <Typography variant="body1" sx={{ textAlign: "justify", mb: 3 }}>
                     La planta de tratamiento de aguas residuales industriales (PTARI) de{" "}
                     <strong>FLOWMACH</strong> tiene como función procesar los efluentes
@@ -41,7 +43,6 @@ export function  PlantaDeTratamiento() {
                     químicos.
                 </Typography>
 
-                {/* Imagen principal */}
                 <Box sx={{ display: "flex", justifyContent: "center", mb: 4 }}>
                     <img
                         src={img1}
@@ -54,7 +55,6 @@ export function  PlantaDeTratamiento() {
                     />
                 </Box>
 
-                {/* Sección explicativa */}
                 <Paper
                     elevation={0}
                     sx={{
@@ -81,7 +81,7 @@ export function  PlantaDeTratamiento() {
                 </Paper>
 
                 <Grid container spacing={2} justifyContent="center" display={"flex"} flexDirection={"row"}>
-                    <Grid item xs={12} md={6}>
+                    <Grid component={"div"} xs={12} md={6}>
                         <img
                             src={img2}
                             alt="PTARI instalación 1"
@@ -92,7 +92,7 @@ export function  PlantaDeTratamiento() {
                             }}
                         />
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid component={"div"} xs={12} md={6}>
                         <img
                             src={img3}
                             alt="PTARI instalación 2"
@@ -125,5 +125,6 @@ export function  PlantaDeTratamiento() {
                 </Typography>
             </Container>
         </Box>
+         */
     );
 }
