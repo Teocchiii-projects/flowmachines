@@ -1,9 +1,9 @@
 .MuiButton-root{
-      font-family: 'Zilla Slab', sans-serif !important;
-    font-size: medium;
+    font-family: 'Zilla Slab', sans-serif !important;
+    font-size: 1rem !important;
     text-transform: none;
     color: #2b4894!important;
-        
+
 }
 .MuiButton-root:hover{
     color: white!important;
@@ -18,3 +18,16 @@
     background-color: #1e3566!important;
 }
 
+@media (max-width: 768px) {
+    .MuiButton-root {
+        font-size: 1rem !important;
+        padding: 6px 12px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .MuiButton-root {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}

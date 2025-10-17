@@ -9,7 +9,7 @@ import {Home} from "./pages/Home.tsx";
 import {Layout} from "./Layouts/Layout.tsx";
 import {AboutUs} from "./pages/AboutUs.tsx";
 import {NotFound} from "./pages/NotFound.tsx";
-import { Products } from './pages/Products.tsx';
+import Products from "./pages/Products.tsx";
 import {PlantaDeTratamiento} from "./pages/products/PlantaDeTratamiento.tsx";
 import DecantadoresCentrifugos from "./pages/products/DecantadoresCentrifugos.tsx";
 
@@ -22,10 +22,10 @@ const router = createBrowserRouter([
             {path:"/contact", element:<ContactUs/>},
             
             {
-            path: "/products",
+            path: "/products",element:<Products/>,
             children: [
                 { path: "decantadores-centrifugos", element: <DecantadoresCentrifugos /> },
-                { path: "planta-de-tratamiento-de-aguas-residuales-e-industriales", element: <PlantaDeTratamiento /> },
+                { path: "ptari", element: <PlantaDeTratamiento /> },
                 { path: "maquina-preparadora-sulfato-ferrico", element: <Products /> },
                 { path: "maquina-preparadora-polimeros", element: <Products /> },
                 { path: "sistema-homogenizacion-eductores-tanque-ecualizador", element: <Products /> },

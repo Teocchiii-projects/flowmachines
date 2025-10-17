@@ -36,7 +36,7 @@ export default function Clients(){
           }}
         >
             <Container sx={{}}>
-                <h2 style={{textAlign:"center", marginBottom:16}}>Nuestros Clientes</h2>
+                <h3 style={{textAlign:"center", marginBottom:16}}>Nuestros Clientes</h3>
             <span>
                     En <strong>FLOWMACH</strong> nos enorgullece ser aliados estratégicos de las principales empresas del 
                     sector pesquero e industrial. Nuestro compromiso con la<strong> eficiencia, puntualidad y 
