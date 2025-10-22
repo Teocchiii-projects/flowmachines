@@ -15,14 +15,12 @@ export function ContactUs() {
 
     const [isVerified, setIsVerified] = useState(false);
 
-    // cambio en inputs
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
-    // reCAPTCHA
     const handleCaptchaChange = (value: string | null) => {
         setIsVerified(!!value);
     };
@@ -104,18 +102,19 @@ export function ContactUs() {
                 elevation={4}
                 sx={{
                     display: "flex",
-                    flexDirection: "row",
+                    flexDirection: { xs: "column", md: "row" }, // <-- responsive layout
                     borderRadius: 2,
                     overflow: "hidden",
-                    width: "80%",
+                    width: "90%",
                     maxWidth: 1000,
-                    minHeight: 400,
+                    minHeight: { xs: "auto", md: 400 }, // adapt height for mobile
                 }}
             >
+                {/* Formulario */}
                 <Box
                     sx={{
                         flex: 1,
-                        p: 3,
+                        p: { xs: 2, md: 3 },
                         bgcolor: "white",
                     }}
                 >
@@ -181,7 +180,13 @@ export function ContactUs() {
                             required
                         />
 
-                        <Box sx={{ mt: 2, display: "flex", justifyContent: "center" }}>
+                        <Box
+                            sx={{
+                                mt: 2,
+                                display: "flex",
+                                justifyContent: "center",
+                            }}
+                        >
                             <ReCAPTCHA
                                 sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                                 onChange={handleCaptchaChange}
@@ -207,7 +212,15 @@ export function ContactUs() {
                         </Button>
                     </Box>
                 </Box>
-                <Box sx={{ flex: 1 }}>
+
+                {/* Mapa */}
+                <Box
+                    sx={{
+                        flex: 1,
+                        minHeight: { xs: 300, md: "auto" },
+                        width: "100%",
+                    }}
+                >
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.9201103107052!2d-77.01222792416188!3d-11.980029740663385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5626dcb19fd%3A0xb064df1c82a5435b!2sFlow%20Machines%20S.A.C.%20(flowmach)!5e0!3m2!1ses-419!2spe!4v1755928823648!5m2!1ses-419!2spe"
                         width="100%"
