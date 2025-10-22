@@ -1,10 +1,4 @@
 import { Box, Typography, Grid, Divider } from "@mui/material";
-import img1 from "../../../public/assets/pages/products/polimeros/Imagen1.png";
-import img2 from "../../../public/assets/pages/products/polimeros/Imagen2.png";
-import img3 from "../../../public/assets/pages/products/polimeros/Imagen3.png";
-import tanque1 from "../../../public/assets/pages/products/polimeros/Imagen4.png";
-import tanque2 from "../../../public/assets/pages/products/polimeros/Imagen5.png";
-import tanque3 from "../../../public/assets/pages/products/polimeros/Imagen6.png";
 
 export default function MaquinaPolimeros() {
     return (
@@ -51,10 +45,10 @@ export default function MaquinaPolimeros() {
 
             {/* Sección de imágenes superiores */}
             <Grid container spacing={2} alignItems="center" sx={{ mb: 4 }}>
-                <Grid item xs={12} md={6}>
+                <Grid component="div" item xs={12} md={6}>
                     <Box
                         component="img"
-                        src={img1}
+                        src="/assets/pages/products/polimeros/Imagen1.png"
                         alt="Equipo preparador de polímero"
                         sx={{
                             width: "100%",
@@ -65,10 +59,10 @@ export default function MaquinaPolimeros() {
                         }}
                     />
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid component="div" item xs={12} md={6}>
                     <Box
                         component="img"
-                        src={img2}
+                        src="/assets/pages/products/polimeros/Imagen2.png"
                         alt="Tanque agitador"
                         sx={{
                             width: "100%",
@@ -93,7 +87,7 @@ export default function MaquinaPolimeros() {
             {/* Imagen inferior */}
             <Box
                 component="img"
-                src={img3}
+                src="/assets/pages/products/polimeros/Imagen3.png"
                 alt="Vista general de la máquina"
                 sx={{
                     width: "50%",
@@ -127,10 +121,10 @@ export default function MaquinaPolimeros() {
             </Typography>
 
             <Grid container spacing={2} justifyContent="center" sx={{ mb: 4 }}>
-                <Grid item xs={12}>
+                <Grid component="div" item xs={12}>
                     <Box
                         component="img"
-                        src={tanque1}
+                        src="/assets/pages/products/polimeros/Imagen4.png"
                         alt="Tanques conectados 3D"
                         sx={{
                             width: "100%",
@@ -142,10 +136,10 @@ export default function MaquinaPolimeros() {
                     />
                 </Grid>
 
-                <Grid item xs={12}>
+                <Grid component="div" item xs={12}>
                     <Box
                         component="img"
-                        src={tanque3}
+                        src="/assets/pages/products/polimeros/Imagen6.png"
                         alt="Vista técnica de los tanques"
                         sx={{
                             width: "100%",
@@ -157,10 +151,10 @@ export default function MaquinaPolimeros() {
                     />
                 </Grid>
 
-                <Grid item xs={12} md={6}>
+                <Grid component="div" item xs={12} md={6}>
                     <Box
                         component="img"
-                        src={tanque2}
+                        src="/assets/pages/products/polimeros/Imagen5.png"
                         alt="Tanque individual con control"
                         sx={{
                             width: "100%",

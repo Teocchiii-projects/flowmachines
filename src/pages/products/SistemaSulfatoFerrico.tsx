@@ -1,8 +1,6 @@
 import { Box, Typography, Grid, Divider } from "@mui/material";
-import img1 from "../../../public/assets/pages/products/sulfato/Imagen1.png";
-import img2 from "../../../public/assets/pages/products/sulfato/Imagen2.png";
-import img3 from "../../../public/assets/pages/products/sulfato/Imagen3.png";
-import img4 from "../../../public/assets/pages/products/sulfato/Imagen4.png";
+
+// Images are served from `public/` at runtime. Use absolute paths (e.g. /assets/...) instead of importing from public.
 
 export default function SistemaSulfatoFerrico() {
     return (
@@ -33,10 +31,10 @@ export default function SistemaSulfatoFerrico() {
 
             {/* Bloque superior: imagen + texto */}
             <Grid container spacing={3} alignItems="center" sx={{ mb: 4 }}>
-                <Grid item xs={12} md={6}>
+                <Grid component="div" item xs={12} md={6}>
                     <Box
                         component="img"
-                        src={img1}
+                        src="/assets/pages/products/sulfato/Imagen1.png"
                         alt="Sistema preparador de sulfato férrico"
                         sx={{
                             width: "100%",
@@ -47,7 +45,7 @@ export default function SistemaSulfatoFerrico() {
                         }}
                     />
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid component="div" item xs={12} md={6}>
                     <Typography sx={{ textAlign: "initial", mb: 4 }}>
                         Nuestra máquina Preparadora de coagulante (Sulfato férrico) está diseñada para
                         preparar soluciones a partir de componentes líquidos (agua) y sólidos (sulfato
@@ -103,7 +101,7 @@ export default function SistemaSulfatoFerrico() {
                 >
                     <Box
                         component="img"
-                        src={img2}
+                        src="/assets/pages/products/sulfato/Imagen2.png"
                         alt="Detalle sistema sulfato"
                         sx={{
                             width: "120%", // un poco más grande
@@ -118,10 +116,10 @@ export default function SistemaSulfatoFerrico() {
 
             {/* Galería inferior */}
             <Grid container spacing={2} justifyContent="center">
-                <Grid item xs={12} md={4}>
+                <Grid component="div" item xs={12} md={4}>
                     <Box
                         component="img"
-                        src={img3}
+                        src="/assets/pages/products/sulfato/Imagen3.png"
                         alt="Carga de sulfato férrico"
                         sx={{
                             width: "100%",
@@ -132,10 +130,10 @@ export default function SistemaSulfatoFerrico() {
                         }}
                     />
                 </Grid>
-                <Grid item xs={12} md={4}>
+                <Grid component="div" item xs={12} md={4}>
                     <Box
                         component="img"
-                        src={img4}
+                        src="/assets/pages/products/sulfato/Imagen4.png"
                         alt="Preparación del sulfato"
                         sx={{
                             width: "100%",

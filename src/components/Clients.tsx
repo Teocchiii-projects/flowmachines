@@ -1,24 +1,16 @@
-import { Box, Stack, Grid, Container} from "@mui/material";
-import Austral from "../../public/assets/components/clients/AustralGroup.png";
-import CFG from "../../public/assets/components/clients/CFG.png";
-import Condestable from "../../public/assets/components/clients/Condestable.png";
-import Copeinca from"../../public/assets/components/clients/Copeinca.jpeg";
-import Exalmar from "../../public/assets/components/clients/Exalmar.png";
-import Hayduk from "../../public/assets/components/clients/Hayduk.png";
-import Centinela from "../../public/assets/components/clients/PesqueraCentinela.png";
-import Diamante from "../../public/assets/components/clients/PesqueraDiamante.png";
-import Tasa from "../../public/assets/components/clients/Tasa.jpg";
-//TODO: add animations to the images and links to the companies
+import { Box, Stack, Grid, Container } from "@mui/material";
+// Logos are served from public/ at runtime. Use absolute paths in the clientes array below.
+
 const clientes = [
-    {name:"CFG", logo:CFG,url:"https://www.copeinca.com/"},
-    {name:"TASA", logo:Tasa,url:"https://www.tasa.com.pe/"},
-    {name:"AUSTRAL", logo:Austral,url:"https://www.austral.com.pe/"},
-    {name:"CONDESTABLE", logo:Condestable,url:"https://www.condestable.com.pe/"},
-    {name:"COPEINCA", logo:Copeinca,url:"https://www.copeinca.com/"},
-    {name:"EXALMAR", logo:Exalmar,url:"https://www.exalmar.com.pe/"},
-    {name:"HAYDUK", logo:Hayduk,url:"https://www.hayduk.com.pe/"},
-    {name:"CENTINELA", logo:Centinela,url:"https://www.centinelapesquera.com/"},
-    {name:"DIAMANTE", logo:Diamante,url:"https://www.diamante.com.pe/"},
+    { name: "CFG", logo: "/assets/components/clients/CFG.png", url: "https://www.copeinca.com/" },
+    { name: "TASA", logo: "/assets/components/clients/Tasa.jpg", url: "https://www.tasa.com.pe/" },
+    { name: "AUSTRAL", logo: "/assets/components/clients/AustralGroup.png", url: "https://www.austral.com.pe/" },
+    { name: "CONDESTABLE", logo: "/assets/components/clients/Condestable.png", url: "https://www.condestable.com.pe/" },
+    { name: "COPEINCA", logo: "/assets/components/clients/Copeinca.jpeg", url: "https://www.copeinca.com/" },
+    { name: "EXALMAR", logo: "/assets/components/clients/Exalmar.png", url: "https://www.exalmar.com.pe/" },
+    { name: "HAYDUK", logo: "/assets/components/clients/Hayduk.png", url: "https://www.hayduk.com.pe/" },
+    { name: "CENTINELA", logo: "/assets/components/clients/PesqueraCentinela.png", url: "https://www.centinelapesquera.com/" },
+    { name: "DIAMANTE", logo: "/assets/components/clients/PesqueraDiamante.png", url: "https://www.diamante.com.pe/" },
 ]
 
 

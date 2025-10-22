@@ -1,7 +1,5 @@
 import { Box, Typography, Grid, Divider } from "@mui/material";
 
-import img1 from "../../../public/assets/pages/products/ptari/Imagen1.png";
-
 
 
 export function PlantaDeTratamiento() {
@@ -50,7 +48,7 @@ export function PlantaDeTratamiento() {
 
             <Box
                 component="img"
-                src={img1}
+                src="/assets/pages/products/ptari/Imagen1.png"
                 alt="Sistema PTARI"
                 sx={{
                     width: "100%",
