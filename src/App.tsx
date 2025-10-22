@@ -13,6 +13,8 @@ import Products from "./pages/Products.tsx";
 import {PlantaDeTratamiento} from "./pages/products/PlantaDeTratamiento.tsx";
 import DecantadoresCentrifugos from "./pages/products/DecantadoresCentrifugos.tsx";
 
+import MaquinaPolimeros from "./pages/products/MaquinaPolimeros.tsx";
+import SistemaSulfatoFerrico from "./pages/products/SistemaSulfatoFerrico.tsx";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -20,19 +22,20 @@ const router = createBrowserRouter([
         children:[
             {path:"/", element:<Home/>},
             {path:"/contact", element:<ContactUs/>},
-            
-            {
-            path: "/products",element:<Products/>,
-            children: [
-                { path: "decantadores-centrifugos", element: <DecantadoresCentrifugos /> },
-                { path: "ptari", element: <PlantaDeTratamiento /> },
-                { path: "maquina-preparadora-sulfato-ferrico", element: <Products /> },
-                { path: "maquina-preparadora-polimeros", element: <Products /> },
-                { path: "sistema-homogenizacion-eductores-tanque-ecualizador", element: <Products /> },
-                { path: "sistema-generacion-microburbujas-flotacion", element: <Products /> },
-                { path: "bombas-centrifugas-mezcladores-estaticos", element: <Products /> },
-            ],
-            },
+
+            // Catálogo general
+            { path: "/products", element: <Products /> },
+
+            // Páginas de producto
+            { path: "/products/ptari", element: <PlantaDeTratamiento /> },
+            {path: "/products/preparadora-polimero", element:<MaquinaPolimeros/>},
+            { path: "/products/decantadores-centrifugos", element: <DecantadoresCentrifugos /> },
+            { path: "/products/sulfato-ferrico", element: <SistemaSulfatoFerrico /> },
+
+
+            { path: "/products/bombas-centrifugas-mezcladores-estaticos", element: <Products /> },
+
+
 
             {path:"/about",element:<AboutUs/>},
             {path:"*",element:<NotFound/>}

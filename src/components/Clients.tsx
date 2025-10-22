@@ -1,13 +1,13 @@
 import { Box, Stack, Grid, Container} from "@mui/material";
-import Austral from "/assets/components/clients/AustralGroup.png";
-import CFG from "/assets/components/clients/CFG.png";
-import Condestable from "/assets/components/clients/Condestable.png";
-import Copeinca from"assets/components/clients/Copeinca.jpeg";
-import Exalmar from "assets/components/clients/Exalmar.png";
-import Hayduk from "assets/components/clients/Hayduk.png";
-import Centinela from "assets/components/clients/PesqueraCentinela.png";
-import Diamante from "assets/components/clients/PesqueraDiamante.png";
-import Tasa from "assets/components/clients/Tasa.jpg";
+import Austral from "../../public/assets/components/clients/AustralGroup.png";
+import CFG from "../../public/assets/components/clients/CFG.png";
+import Condestable from "../../public/assets/components/clients/Condestable.png";
+import Copeinca from"../../public/assets/components/clients/Copeinca.jpeg";
+import Exalmar from "../../public/assets/components/clients/Exalmar.png";
+import Hayduk from "../../public/assets/components/clients/Hayduk.png";
+import Centinela from "../../public/assets/components/clients/PesqueraCentinela.png";
+import Diamante from "../../public/assets/components/clients/PesqueraDiamante.png";
+import Tasa from "../../public/assets/components/clients/Tasa.jpg";
 //TODO: add animations to the images and links to the companies
 const clientes = [
     {name:"CFG", logo:CFG,url:"https://www.copeinca.com/"},
