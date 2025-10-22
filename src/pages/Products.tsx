@@ -11,26 +11,26 @@ export default function Products() {
             titulo: "Maquina perparadora de polímero",
             ruta:"/products/preparadora-polimero",
             descripcion: "Automarización de soluciones agua/polímero floculante",
-            imagen: "public/assets/pages/products/polimeros/Imagen1.png",
+            imagen: "/assets/pages/products/polimeros/Imagen1.png",
 
         },
         {
             titulo: "Planta de Tratamiento (PTARI)",
             ruta:"/products/ptari",
             descripcion: "Planta de tratamiento de aguas residuales",
-            imagen: "public/assets/pages/products/ptari/Imagen1.png",
+            imagen: "/assets/pages/products/ptari/Imagen1.png",
         },
         {
             titulo: "Sistema preparador de sulfato férrico",
             ruta: "/products/sulfato-ferrico",
             descripcion: "Equipo para la preparación eficiente de sulfato férrico.",
-            imagen: "../../public/assets/pages/products/sulfato/Imagen1.png",
+            imagen: "/assets/pages/products/sulfato/Imagen1.png",
         },
         {
             titulo: "Sistema de homogenización por eductores para tanque ecualizador",
-            ruta:"products/sistema-homogenizador",
+            ruta: "/products/sistema-homogenizador",
             descripcion: "Mezcla eficiente en tanques ecualizadores mediante eductores.",
-            imagen: "public/assets/pages/products/homogenizador/Imagen1.png",
+            imagen: "/assets/pages/products/homogenizador/Imagen1.png",
         }
 
     ];
@@ -58,7 +58,7 @@ export default function Products() {
                 }}
             >
                 {productos.map((p) => (
-                    <Grid item key={p.titulo}>
+                    <Grid component="div" item key={p.titulo}>
                         <Card
                             sx={{
                                 width: 250,

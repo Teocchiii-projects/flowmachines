@@ -1,9 +1,6 @@
 import { Box, Typography, Grid, Divider } from "@mui/material";
 
 import img1 from "../../../public/assets/pages/products/ptari/Imagen1.png";
-import img2 from "../../../public/assets/pages/products/ptari/Imagen2.png";
-import img3 from "../../../public/assets/pages/products/ptari/Imagen3.png";
-import img4 from "../../../public/assets/pages/products/ptari/Imagen4.png";
 
 
 
@@ -80,43 +77,43 @@ export function PlantaDeTratamiento() {
 
             {/* Galería de imágenes inferiores */}
             <Grid container spacing={3} justifyContent="center">
-                <Grid item xs={12} md={6}>
+                <Grid component="div" item xs={12} md={6}>
                     <Box
                         component="img"
-                        src={img3}
+                        src="/assets/pages/products/ptari/Imagen3.png"
                         alt="Tanque de tratamiento"
                         sx={{
                             width: "100%",
                             maxHeight: 220,
-                            objectFit:"cover",
+                            objectFit: "cover",
                             borderRadius: 2,
                             boxShadow: 2,
                         }}
                     />
                 </Grid>
-                <Grid item xs={12} md={3}>
+                <Grid component="div" item xs={12} md={3}>
                     <Box
                         component="img"
-                        src={img4}
+                        src="/assets/pages/products/ptari/Imagen4.png"
                         alt="Vista lateral PTARI"
                         sx={{
                             width: "100%",
                             maxHeight: 220,
-                            objectFit:"cover",
+                            objectFit: "cover",
                             borderRadius: 2,
                             boxShadow: 2,
                         }}
                     />
                 </Grid>
-                <Grid item xs={12} md={3}>
+                <Grid component="div" item xs={12} md={3}>
                     <Box
                         component="img"
-                        src={img2}
+                        src="/assets/pages/products/ptari/Imagen2.png"
                         alt="Sistema de tratamiento"
                         sx={{
                             width: "100%",
                             maxHeight: 220,
-                            objectFit:"cover",
+                            objectFit: "cover",
                             borderRadius: 2,
                             boxShadow: 2,
                         }}
