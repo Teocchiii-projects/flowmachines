@@ -1,9 +1,8 @@
 import { Fab } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 export default function WhatsAppButton() {
-    //TODO: CAMBIAR EL NUMERO DE TELEFONO Y MENSAJE PREDETERMINADO
-    const phoneNumber = "51999999999";
-    const message = "Hola, quisiera más información sobre FlowMachines";
+    const phoneNumber = "51998361296";
+    const message = "Hola, quisiera más información sobre algun equipo de flowmachines";
 
     return (
         <Fab
