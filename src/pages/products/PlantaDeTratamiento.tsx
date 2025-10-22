@@ -1,6 +1,5 @@
-import { Box, Typography, Grid, Divider } from "@mui/material";
-
-
+import { Box, Typography, Divider } from "@mui/material";
+import SimpleGrid from "../../components/SimpleGrid";
 
 export function PlantaDeTratamiento() {
     return (
@@ -74,8 +73,8 @@ export function PlantaDeTratamiento() {
             </Typography>
 
             {/* Galería de imágenes inferiores */}
-            <Grid container spacing={3} justifyContent="center">
-                <Grid component="div" item xs={12} md={6}>
+            <SimpleGrid container spacing={3} justifyContent="center">
+                <SimpleGrid item xs={12} md={6}>
                     <Box
                         component="img"
                         src="/assets/pages/products/ptari/Imagen3.png"
@@ -88,8 +87,8 @@ export function PlantaDeTratamiento() {
                             boxShadow: 2,
                         }}
                     />
-                </Grid>
-                <Grid component="div" item xs={12} md={3}>
+                </SimpleGrid>
+                <SimpleGrid item xs={12} md={3}>
                     <Box
                         component="img"
                         src="/assets/pages/products/ptari/Imagen4.png"
@@ -102,8 +101,8 @@ export function PlantaDeTratamiento() {
                             boxShadow: 2,
                         }}
                     />
-                </Grid>
-                <Grid component="div" item xs={12} md={3}>
+                </SimpleGrid>
+                <SimpleGrid item xs={12} md={3}>
                     <Box
                         component="img"
                         src="/assets/pages/products/ptari/Imagen2.png"
@@ -116,8 +115,8 @@ export function PlantaDeTratamiento() {
                             boxShadow: 2,
                         }}
                     />
-                </Grid>
-            </Grid>
+                </SimpleGrid>
+            </SimpleGrid>
         </Box>
     );
 }

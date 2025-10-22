@@ -1,4 +1,5 @@
-import { Box, Typography, Grid, Divider } from "@mui/material";
+import { Box, Typography, Divider } from "@mui/material";
+import SimpleGrid from "../../components/SimpleGrid";
 
 // Images are served from `public/` at runtime. Use absolute paths (e.g. /assets/...) instead of importing from public.
 
@@ -30,8 +31,8 @@ export default function SistemaSulfatoFerrico() {
             <Divider sx={{ my: 3 }} />
 
             {/* Bloque superior: imagen + texto */}
-            <Grid container spacing={3} alignItems="center" sx={{ mb: 4 }}>
-                <Grid component="div" item xs={12} md={6}>
+            <SimpleGrid container spacing={3} alignItems="center" sx={{ mb: 4 }}>
+                <SimpleGrid item xs={12} md={6}>
                     <Box
                         component="img"
                         src="/assets/pages/products/sulfato/Imagen1.png"
@@ -44,8 +45,8 @@ export default function SistemaSulfatoFerrico() {
                             boxShadow: 2,
                         }}
                     />
-                </Grid>
-                <Grid component="div" item xs={12} md={6}>
+                </SimpleGrid>
+                <SimpleGrid item xs={12} md={6}>
                     <Typography sx={{ textAlign: "initial", mb: 4 }}>
                         Nuestra máquina Preparadora de coagulante (Sulfato férrico) está diseñada para
                         preparar soluciones a partir de componentes líquidos (agua) y sólidos (sulfato
@@ -53,8 +54,8 @@ export default function SistemaSulfatoFerrico() {
                         permite preparar a distintas concentraciones en peso (%W/W), dependiendo de la
                         necesidad del cliente.
                     </Typography>
-                </Grid>
-            </Grid>
+                </SimpleGrid>
+            </SimpleGrid>
 
             {/* Bloque: ventajas + imagen lateral */}
             <div
@@ -115,8 +116,8 @@ export default function SistemaSulfatoFerrico() {
             </div>
 
             {/* Galería inferior */}
-            <Grid container spacing={2} justifyContent="center">
-                <Grid component="div" item xs={12} md={4}>
+            <SimpleGrid container spacing={2} justifyContent="center">
+                <SimpleGrid item xs={12} md={4}>
                     <Box
                         component="img"
                         src="/assets/pages/products/sulfato/Imagen3.png"
@@ -129,8 +130,8 @@ export default function SistemaSulfatoFerrico() {
                             boxShadow: 2,
                         }}
                     />
-                </Grid>
-                <Grid component="div" item xs={12} md={4}>
+                </SimpleGrid>
+                <SimpleGrid item xs={12} md={4}>
                     <Box
                         component="img"
                         src="/assets/pages/products/sulfato/Imagen4.png"
@@ -143,10 +144,10 @@ export default function SistemaSulfatoFerrico() {
                             boxShadow: 2,
                         }}
                     />
-                </Grid>
-            </Grid>
+                </SimpleGrid>
+            </SimpleGrid>
 
-            {/* Pie de foto */}
+             {/* Pie de foto */}
             <Typography
                 variant="body2"
                 align="center"

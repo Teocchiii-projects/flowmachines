@@ -1,4 +1,5 @@
-import { Box, Typography, Grid, Divider } from "@mui/material";
+import { Box, Typography, Divider } from "@mui/material";
+import SimpleGrid from "../../components/SimpleGrid";
 
 export default function MaquinaPolimeros() {
     return (
@@ -44,8 +45,8 @@ export default function MaquinaPolimeros() {
             </Box>
 
             {/* Sección de imágenes superiores */}
-            <Grid container spacing={2} alignItems="center" sx={{ mb: 4 }}>
-                <Grid component="div" item xs={12} md={6}>
+            <SimpleGrid container spacing={2} alignItems="center" sx={{ mb: 4 }}>
+                <SimpleGrid item xs={12} md={6}>
                     <Box
                         component="img"
                         src="/assets/pages/products/polimeros/Imagen1.png"
@@ -58,8 +59,8 @@ export default function MaquinaPolimeros() {
                             objectFit: "contain",
                         }}
                     />
-                </Grid>
-                <Grid component="div" item xs={12} md={6}>
+                </SimpleGrid>
+                <SimpleGrid item xs={12} md={6}>
                     <Box
                         component="img"
                         src="/assets/pages/products/polimeros/Imagen2.png"
@@ -72,8 +73,8 @@ export default function MaquinaPolimeros() {
                             objectFit: "contain",
                         }}
                     />
-                </Grid>
-            </Grid>
+                </SimpleGrid>
+            </SimpleGrid>
 
             {/* Diseño estructural */}
             <Typography sx={{ fontSize: 24, fontWeight: 600, mb: 1 }}>
@@ -120,8 +121,8 @@ export default function MaquinaPolimeros() {
                 Diseño de tanques conectados por vasos comunicantes
             </Typography>
 
-            <Grid container spacing={2} justifyContent="center" sx={{ mb: 4 }}>
-                <Grid component="div" item xs={12}>
+            <SimpleGrid container spacing={2} justifyContent="center" sx={{ mb: 4 }}>
+                <SimpleGrid item xs={12}>
                     <Box
                         component="img"
                         src="/assets/pages/products/polimeros/Imagen4.png"
@@ -134,9 +135,9 @@ export default function MaquinaPolimeros() {
                             objectFit: "contain",
                         }}
                     />
-                </Grid>
+                </SimpleGrid>
 
-                <Grid component="div" item xs={12}>
+                <SimpleGrid item xs={12}>
                     <Box
                         component="img"
                         src="/assets/pages/products/polimeros/Imagen6.png"
@@ -149,9 +150,9 @@ export default function MaquinaPolimeros() {
                             objectFit: "contain",
                         }}
                     />
-                </Grid>
+                </SimpleGrid>
 
-                <Grid component="div" item xs={12} md={6}>
+                <SimpleGrid item xs={12} md={6}>
                     <Box
                         component="img"
                         src="/assets/pages/products/polimeros/Imagen5.png"
@@ -164,8 +165,8 @@ export default function MaquinaPolimeros() {
                             objectFit: "contain",
                         }}
                     />
-                </Grid>
-            </Grid>
+                </SimpleGrid>
+            </SimpleGrid>
 
             <Typography sx={{ fontSize: 20, fontWeight: 600, mb: 1 }}>
                 Características del diseño

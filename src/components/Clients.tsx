@@ -1,4 +1,5 @@
-import { Box, Stack, Grid, Container } from "@mui/material";
+import { Box, Stack, Container } from "@mui/material";
+import SimpleGrid from "../components/SimpleGrid";
 // Logos are served from public/ at runtime. Use absolute paths in the clientes array below.
 
 const clientes = [
@@ -50,7 +51,7 @@ export default function Clients(){
     
             </Container>
     
-        <Grid container spacing={3} justifyContent={'center'} alignItems={'center'}>
+        <SimpleGrid container spacing={3} justifyContent={'center'} alignItems={'center'}>
         <Stack direction="row" spacing={3} justifyContent="center" alignItems="center" flexWrap="wrap">
             {clientes.map((cliente) => (
                 <Box
@@ -79,7 +80,7 @@ export default function Clients(){
                 </Box>
             ))}
         </Stack>
-        </Grid>
+        </SimpleGrid>
          </Container>
         </>
     );

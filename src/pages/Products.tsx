@@ -1,22 +1,21 @@
-import { Grid, Card, CardActionArea, CardMedia, CardContent, Typography, Box, Divider } from "@mui/material";
-import { useNavigate, Outlet} from "react-router-dom";
+import { Card, CardActionArea, CardMedia, CardContent, Typography, Box, Divider } from "@mui/material";
+import { useNavigate, Outlet } from "react-router-dom";
 import PieChart from "../components/PieChart.tsx";
+import SimpleGrid from "../components/SimpleGrid";
 
 export default function Products() {
     const navigate = useNavigate();
 
-
     const productos = [
         {
-            titulo: "Maquina perparadora de polímero",
-            ruta:"/products/preparadora-polimero",
-            descripcion: "Automarización de soluciones agua/polímero floculante",
+            titulo: "Maquina preparadora de polímero",
+            ruta: "/products/preparadora-polimero",
+            descripcion: "Automatización de soluciones agua/polímero floculante",
             imagen: "/assets/pages/products/polimeros/Imagen1.png",
-
         },
         {
             titulo: "Planta de Tratamiento (PTARI)",
-            ruta:"/products/ptari",
+            ruta: "/products/ptari",
             descripcion: "Planta de tratamiento de aguas residuales",
             imagen: "/assets/pages/products/ptari/Imagen1.png",
         },
@@ -31,8 +30,7 @@ export default function Products() {
             ruta: "/products/sistema-homogenizador",
             descripcion: "Mezcla eficiente en tanques ecualizadores mediante eductores.",
             imagen: "/assets/pages/products/homogenizador/Imagen1.png",
-        }
-
+        },
     ];
 
     return (
@@ -45,26 +43,33 @@ export default function Products() {
                 m: 4,
             }}
         >
-            <h2> Nuestros productos </h2>
+            <Typography
+                variant="h4"
+                align="center"
+                sx={{ color: "#304797", fontWeight: 700, mb: 2, fontFamily: "Zilla Slab" }}
+            >
+                Nuestros productos
+            </Typography>
 
             <Divider sx={{ my: 4 }} />
 
-            <Grid
+            <SimpleGrid
                 container
                 spacing={4}
+                justifyContent="center"
+                alignItems="stretch"
                 sx={{
-                    justifyContent: "center",
                     flexWrap: "wrap",
+                    flexDirection: "row", // asegura disposición horizontal
                 }}
             >
                 {productos.map((p) => (
-                    <Grid component="div" item key={p.titulo}>
+                    <SimpleGrid item key={p.titulo} xs={12} md={3}>
                         <Card
                             sx={{
-                                width: 250,
+                                width: "90%",
                                 borderRadius: 2,
                                 boxShadow: 4,
-                                position: "relative",
                                 overflow: "hidden",
                                 transition: "transform 0.3s ease",
                                 "&:hover": { transform: "scale(1.05)" },
@@ -78,7 +83,6 @@ export default function Products() {
                                         image={p.imagen}
                                         alt={p.titulo}
                                     />
-
                                     <Box
                                         sx={{
                                             position: "absolute",
@@ -118,20 +122,22 @@ export default function Products() {
                                 </CardContent>
                             </CardActionArea>
                         </Card>
-                    </Grid>
+                    </SimpleGrid>
                 ))}
-            </Grid>
+            </SimpleGrid>
 
             <Box
                 sx={{
                     mt: 6,
                     display: "flex",
-                    justifyContent: "center",
+                    justifyContent: "flex-start",
                     alignItems: "center",
+                    ml: { xs: 2, md: 8 },
+                    gap: 4,
                 }}
             >
                 <PieChart />
-                <Outlet/>
+                <Outlet />
             </Box>
         </Box>
     );
