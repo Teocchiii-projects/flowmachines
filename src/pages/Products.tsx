@@ -27,9 +27,9 @@ export default function Products() {
         },
         {
             titulo: "Sistema de homogenización por eductores para tanque ecualizador",
-            ruta: "/products/sistema-homogenizador",
+            ruta: "/products/homogenizacion-por-eductores",
             descripcion: "Mezcla eficiente en tanques ecualizadores mediante eductores.",
-            imagen: "/assets/pages/products/homogenizador/Imagen1.png",
+            imagen: "/assets/pages/products/homogenizacion/Imagen8.png",
         },
     ];
 

@@ -51,7 +51,7 @@ export default function PieChart() {
                 boxShadow: 3,
             }}
         >
-            <h4>Distribucion </h4>
+            <h4>Productos más vendidos </h4>
             <CardContent
                 sx={{
                     p: 2,

@@ -15,6 +15,7 @@ import DecantadoresCentrifugos from "./pages/products/DecantadoresCentrifugos.ts
 
 import MaquinaPolimeros from "./pages/products/MaquinaPolimeros.tsx";
 import SistemaSulfatoFerrico from "./pages/products/SistemaSulfatoFerrico.tsx";
+import Homogenizacion from "./pages/products/Homogenizacion.tsx";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
             {path: "/products/preparadora-polimero", element:<MaquinaPolimeros/>},
             { path: "/products/decantadores-centrifugos", element: <DecantadoresCentrifugos /> },
             { path: "/products/sulfato-ferrico", element: <SistemaSulfatoFerrico /> },
+            { path: "/products/homogenizacion-por-eductores", element: <Homogenizacion /> },
 
 
             { path: "/products/bombas-centrifugas-mezcladores-estaticos", element: <Products /> },

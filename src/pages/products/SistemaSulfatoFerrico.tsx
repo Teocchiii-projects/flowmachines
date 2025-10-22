@@ -1,12 +1,8 @@
 import { Box, Typography, Divider } from "@mui/material";
 import SimpleGrid from "../../components/SimpleGrid";
 
-// Images are served from `public/` at runtime. Use absolute paths (e.g. /assets/...) instead of importing from public.
-
 export default function SistemaSulfatoFerrico() {
     return (
-
-
         <Box
             sx={{
                 backgroundColor: "white",
@@ -30,135 +26,150 @@ export default function SistemaSulfatoFerrico() {
 
             <Divider sx={{ my: 3 }} />
 
-            {/* Bloque superior: imagen + texto */}
-            <SimpleGrid container spacing={3} alignItems="center" sx={{ mb: 4 }}>
-                <SimpleGrid item xs={12} md={6}>
-                    <Box
-                        component="img"
-                        src="/assets/pages/products/sulfato/Imagen1.png"
-                        alt="Sistema preparador de sulfato férrico"
-                        sx={{
-                            width: "100%",
-                            maxHeight: 400,
-                            objectFit: "contain",
-                            borderRadius: 2,
-                            boxShadow: 2,
-                        }}
-                    />
-                </SimpleGrid>
-                <SimpleGrid item xs={12} md={6}>
-                    <Typography sx={{ textAlign: "initial", mb: 4 }}>
-                        Nuestra máquina Preparadora de coagulante (Sulfato férrico) está diseñada para
-                        preparar soluciones a partir de componentes líquidos (agua) y sólidos (sulfato
-                        férrico en polvo) mediante un sistema de succión. La versatilidad del equipo nos
-                        permite preparar a distintas concentraciones en peso (%W/W), dependiendo de la
-                        necesidad del cliente.
-                    </Typography>
-                </SimpleGrid>
-            </SimpleGrid>
-
-            {/* Bloque: ventajas + imagen lateral */}
+            {/* Contenedor principal */}
             <div
                 style={{
                     display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    gap: "40px", // separación clara entre texto e imagen
-                    marginBottom: "50px",
+                    flexDirection: "column",
+                    alignItems: "center", // <-- centra todo horizontalmente
                 }}
             >
-                {/* Columna de texto */}
-                <div style={{ flex: 1 }}>
-                    <Typography sx={{ fontSize: 20, fontWeight: 600, mb: 2 }}>
-                        Ventajas de nuestro equipo:
-                    </Typography>
-                    <Box component="ul" sx={{ pl: 2, mb: 0, textAlign: "justify" }}>
-                        <li>
-                            Nuestro sistema por succión no genera polución al momento de la preparación. Al
-                            trabajar con sulfato férrico en polvo, éste tiene mayor área superficial, lo que
-                            mejora y acelera el proceso de mezclado.
-                        </li>
-                        <li>
-                            Menor tiempo de maduración; contamos con el mejor sistema de homogenización. El
-                            sistema por educación permite agilizar la mezcla de manera más eficiente,
-                            reduciendo el tiempo de maduración.
-                        </li>
-                        <li>
-                            Preparación a distintas concentraciones. Nuestro equipo es adaptable a diferentes
-                            configuraciones, al trabajar con BIG BAGS de 800 kg nos permite preparar
-                            soluciones a la concentración %W/W que requiera.
-                        </li>
-                    </Box>
-                </div>
+                {/* Imagen principal centrada */}
+                <Box
+                    component="img"
+                    src="/assets/pages/products/sulfato/Imagen1.png"
+                    alt="Sistema preparador de sulfato férrico"
+                    sx={{
+                        width: { xs: "80%", md: "40%" }, // más grande en móvil
+                        maxHeight: 300,
+                        objectFit: "contain",
+                        borderRadius: 2,
+                        boxShadow: 2,
+                        display: "block",
+                        margin: "0 auto", // centrado horizontal
+                    }}
+                />
 
-                {/* Imagen lateral */}
-                <div
-                    style={{
-                        flex: 1,
-                        display: "flex",
-                        justifyContent: "center",
+                <Divider sx={{ my: 3, width: "100%" }} />
+
+                <Typography
+                    sx={{
+                        textAlign: "justify",
+                        mb: 4,
+                        width: { xs: "90%", md: "100%" },
                     }}
                 >
-                    <Box
-                        component="img"
-                        src="/assets/pages/products/sulfato/Imagen2.png"
-                        alt="Detalle sistema sulfato"
-                        sx={{
-                            width: "120%", // un poco más grande
-                            maxHeight: 400,
-                            objectFit: "cover",
-                            borderRadius: 2,
-                            boxShadow: 2,
+                    Nuestra máquina Preparadora de coagulante (Sulfato férrico) está diseñada para
+                    preparar soluciones a partir de componentes líquidos (agua) y sólidos (sulfato
+                    férrico en polvo) mediante un sistema de succión. La versatilidad del equipo nos
+                    permite preparar a distintas concentraciones en peso (%W/W), dependiendo de la
+                    necesidad del cliente.
+                </Typography>
+
+                {/* Bloque: ventajas + imagen lateral */}
+                <div
+                    style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        gap: "40px",
+                        marginBottom: "50px",
+                        width: "100%",
+                    }}
+                >
+                    {/* Columna de texto */}
+                    <div style={{ flex: 1 }}>
+                        <Typography sx={{ fontSize: 20, fontWeight: 600, mb: 2 }}>
+                            Ventajas de nuestro equipo:
+                        </Typography>
+                        <Box component="ul" sx={{ pl: 2, mb: 0, textAlign: "justify" }}>
+                            <li>
+                                Nuestro sistema por succión no genera polución al momento de la
+                                preparación. Al trabajar con sulfato férrico en polvo, éste tiene mayor
+                                área superficial, lo que mejora y acelera el proceso de mezclado.
+                            </li>
+                            <li>
+                                Menor tiempo de maduración; contamos con el mejor sistema de
+                                homogenización. El sistema por educación permite agilizar la mezcla de
+                                manera más eficiente, reduciendo el tiempo de maduración.
+                            </li>
+                            <li>
+                                Preparación a distintas concentraciones. Nuestro equipo es adaptable a
+                                diferentes configuraciones, al trabajar con BIG BAGS de 800 kg nos permite
+                                preparar soluciones a la concentración %W/W que requiera.
+                            </li>
+                        </Box>
+                    </div>
+
+                    {/* Imagen lateral */}
+                    <div
+                        style={{
+                            flex: 1,
+                            display: "flex",
+                            justifyContent: "center",
                         }}
-                    />
+                    >
+                        <Box
+                            component="img"
+                            src="/assets/pages/products/sulfato/Imagen2.png"
+                            alt="Detalle sistema sulfato"
+                            sx={{
+                                width: "120%",
+                                maxHeight: 400,
+                                objectFit: "cover",
+                                borderRadius: 2,
+                                boxShadow: 2,
+                            }}
+                        />
+                    </div>
                 </div>
+
+                {/* Galería inferior */}
+                <SimpleGrid container spacing={2} justifyContent="center">
+                    <SimpleGrid item xs={12} md={4}>
+                        <Box
+                            component="img"
+                            src="/assets/pages/products/sulfato/Imagen3.png"
+                            alt="Carga de sulfato férrico"
+                            sx={{
+                                width: "100%",
+                                margin: "auto",
+                                height: "100%",
+                                borderRadius: 2,
+                                boxShadow: 2,
+                            }}
+                        />
+                    </SimpleGrid>
+                    <SimpleGrid item xs={12} md={4}>
+                        <Box
+                            component="img"
+                            src="/assets/pages/products/sulfato/Imagen4.png"
+                            alt="Preparación del sulfato"
+                            sx={{
+                                width: "100%",
+                                maxHeight: 200,
+                                objectFit: "cover",
+                                borderRadius: 2,
+                                boxShadow: 2,
+                            }}
+                        />
+                    </SimpleGrid>
+                </SimpleGrid>
+
+                {/* Pie de foto */}
+                <Typography
+                    variant="body2"
+                    align="center"
+                    sx={{
+                        fontStyle: "italic",
+                        color: "#555",
+                        mt: 3,
+                    }}
+                >
+                    Pruebas de máquina preparadora de coagulante en la industria pesquera.
+                </Typography>
             </div>
-
-            {/* Galería inferior */}
-            <SimpleGrid container spacing={2} justifyContent="center">
-                <SimpleGrid item xs={12} md={4}>
-                    <Box
-                        component="img"
-                        src="/assets/pages/products/sulfato/Imagen3.png"
-                        alt="Carga de sulfato férrico"
-                        sx={{
-                            width: "100%",
-                            maxHeight: 300,
-                            objectFit: "cover",
-                            borderRadius: 2,
-                            boxShadow: 2,
-                        }}
-                    />
-                </SimpleGrid>
-                <SimpleGrid item xs={12} md={4}>
-                    <Box
-                        component="img"
-                        src="/assets/pages/products/sulfato/Imagen4.png"
-                        alt="Preparación del sulfato"
-                        sx={{
-                            width: "100%",
-                            maxHeight: 300,
-                            objectFit: "cover",
-                            borderRadius: 2,
-                            boxShadow: 2,
-                        }}
-                    />
-                </SimpleGrid>
-            </SimpleGrid>
-
-             {/* Pie de foto */}
-            <Typography
-                variant="body2"
-                align="center"
-                sx={{
-                    fontStyle: "italic",
-                    color: "#555",
-                    mt: 3,
-                }}
-            >
-                Pruebas de máquina preparadora de coagulante en la industria pesquera.
-            </Typography>
         </Box>
     );
 }
