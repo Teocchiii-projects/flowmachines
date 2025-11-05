@@ -1,7 +1,7 @@
 import { Fab } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 export default function WhatsAppButton() {
-    const phoneNumber = "51998361296";
+    const phoneNumber = "51934747214";
     const message = "Hola, quisiera más información sobre algun equipo de flowmachines";
 
     return (
