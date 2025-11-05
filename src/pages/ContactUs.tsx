@@ -140,6 +140,7 @@ export function ContactUs() {
                             margin="dense"
                             required
                         />
+
                         <TextField
                             label="Empresa"
                             name="empresa"
@@ -149,17 +150,39 @@ export function ContactUs() {
                             margin="dense"
                             required
                         />
+
                         <TextField
                             label="Teléfono"
                             name="telefono"
                             value={form.telefono}
-                            onChange={handleChange}
+                            onChange={(e) => {
+                                const value = e.target.value;
+                                // permite solo números
+                                if (/^\d*$/.test(value)) {
+                                    handleChange(e);
+                                }
+                            }}
+                            error={form.telefono !== "" && !/^\d+$/.test(form.telefono)} // error si contiene letras
+                            helperText={
+                                form.telefono !== "" && !/^\d+$/.test(form.telefono)
+                                    ? "Ingrese solo números"
+                                    : "Ejemplo: 987654321"
+                            }
                             fullWidth
                             margin="dense"
                             required
+                            slotProps={{
+                                input: {
+                                    inputProps: {
+                                        inputMode: "numeric",
+                                        pattern: "[0-9]*",
+                                    },
+                                }
+                            }}
                         />
+
                         <TextField
-                            label="Correo Electrónico"
+                                label="Correo Electrónico"
                             name="correo"
                             type="email"
                             value={form.correo}
@@ -168,6 +191,7 @@ export function ContactUs() {
                             margin="dense"
                             required
                         />
+
                         <TextField
                             label="Comentarios"
                             name="comentarios"
@@ -211,6 +235,7 @@ export function ContactUs() {
                             Enviar
                         </Button>
                     </Box>
+
                 </Box>
 
                 {/* Mapa */}
