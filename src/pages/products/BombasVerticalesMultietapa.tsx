@@ -100,10 +100,9 @@ export default function BombasVerticalesMultietapa() {
             src={bomba1}
             alt="Bomba Vertical 1"
             style={{
-              width: "100%",
-              maxWidth: "300px",
-              borderRadius: "8px",
-              boxShadow: "0 2px 6px rgba(48,71,151,0.25)",
+                maxHeight:"500px",
+                borderRadius: "8px",
+                boxShadow: "0 2px 6px rgba(48,71,151,0.25)",
             }}
           />
         </Box>
@@ -113,10 +112,9 @@ export default function BombasVerticalesMultietapa() {
             src={bomba2}
             alt="Bomba Vertical 2"
             style={{
-              width: "100%",
-              maxWidth: "300px",
-              borderRadius: "8px",
-              boxShadow: "0 2px 6px rgba(48,71,151,0.25)",
+                maxHeight:"500px",
+                borderRadius: "8px",
+                boxShadow: "0 2px 6px rgba(48,71,151,0.25)",
             }}
           />
         </Box>
