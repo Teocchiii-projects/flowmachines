@@ -1,18 +1,18 @@
-import { Card, CardContent, Box } from "@mui/material";
+import { Card, CardContent, Typography, Box } from "@mui/material";
 import { Pie } from "react-chartjs-2";
 import type { TooltipItem, ChartOptions } from "chart.js";
-import {
-    Chart as ChartJS,
-    ArcElement,
-    Tooltip,
-    Legend,
-} from "chart.js";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function PieChart() {
     const data = {
-        labels: ["Bombas", "Separadoras", "PTARI-FISHVAC", "Preparadora de Químicos"],
+        labels: [
+            "Bombas",
+            "Separadoras",
+            "PTARI-FISHVAC",
+            "Preparadora de Químicos",
+        ],
         datasets: [
             {
                 data: [40.9, 30.9, 14.5, 13.6],
@@ -38,6 +38,10 @@ export default function PieChart() {
             },
             legend: {
                 position: "bottom",
+                labels: {
+                    boxWidth: 14,
+                    font: { size: 12 },
+                },
             },
         },
     };
@@ -45,20 +49,29 @@ export default function PieChart() {
     return (
         <Card
             sx={{
-                width: { xs: "100%", sm: 520, md: 640 },
+                width: "100%",
+                maxWidth: 480,
                 mx: "auto",
-                mt: 4,
+                mt: { xs: 3, md: 0 },
                 boxShadow: 3,
+                borderRadius: 2,
+                p: 1,
             }}
         >
-            <h4>Productos más vendidos </h4>
+            <Typography
+                variant="h6"
+                align="center"
+                sx={{ color: "#304797", fontWeight: 600, mb: 1 }}
+            >
+                Productos más vendidos
+            </Typography>
             <CardContent
                 sx={{
-                    p: 2,
+                    p: { xs: 1, md: 2 },
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    height: { xs: 300, sm: 360, md: 420 },
+                    height: { xs: 260, sm: 300, md: 360 },
                 }}
             >
                 <Box sx={{ width: "100%", height: "100%" }}>

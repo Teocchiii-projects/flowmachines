@@ -1,5 +1,4 @@
 import { Box, Typography, Divider } from "@mui/material";
-import SimpleGrid from "../../components/SimpleGrid";
 
 export default function Homogenizacion() {
     return (
@@ -23,6 +22,7 @@ export default function Homogenizacion() {
             >
                 SISTEMA DE HOMOGENIZACIÓN POR EDUCTORES
             </Typography>
+
             <Typography
                 variant="h5"
                 align="center"
@@ -43,9 +43,10 @@ export default function Homogenizacion() {
                 Características
             </Typography>
             <Typography sx={{ textAlign: "justify", mb: 3 }}>
-                El sistema de agitación por eductores de FLOWMACH es uno de los más eficientes
-                para mantener mezclas de manera homogénea. Este tipo de sistemas es aplicable en
-                tanques colectores para aguas industriales (PTARI) como aguas del proceso.
+                El sistema de agitación por eductores de FLOWMACH es uno de los más
+                eficientes para mantener mezclas homogéneas. Este tipo de sistemas se
+                aplica en tanques colectores para aguas industriales (PTARI) y aguas de
+                proceso.
             </Typography>
 
             {/* Ventajas */}
@@ -54,64 +55,68 @@ export default function Homogenizacion() {
             </Typography>
             <Box component="ul" sx={{ pl: 2, mb: 4, textAlign: "justify" }}>
                 <li>
-                    Mantiene la mezcla homogénea, lo que permitirá en las líneas siguientes una
-                    dosificación constante de coagulante y floculante sin muchas variaciones.
+                    Mantiene la mezcla homogénea, garantizando una dosificación constante
+                    de coagulante y floculante.
                 </li>
                 <li>
-                    Evita la sedimentación y formación de capas, reduciendo la acumulación en los
-                    fondos.
+                    Evita la sedimentación y formación de capas, reduciendo acumulaciones
+                    en el fondo.
                 </li>
-                <li>Mejora el proceso de limpieza y mantenimiento del tanque.</li>
-                <li>El mantenimiento del sistema es de manera externa.</li>
+                <li>Facilita la limpieza y el mantenimiento del tanque.</li>
+                <li>El mantenimiento del sistema se realiza externamente.</li>
             </Box>
 
-            {/* Fila principal: eductor y tanque superior */}
-            <SimpleGrid
-                container
-                spacing={3}
-                justifyContent="center"
-                alignItems="center"
-                sx={{ mb: 6, flexDirection: { xs: "column", md: "row" } }}
+            {/* Bloque principal: Eductor + Hexagonal */}
+            <Box
+                sx={{
+                    display: "flex",
+                    flexDirection: { xs: "column", md: "row" },
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap: 5,
+                    mb: 6,
+                }}
             >
-                <SimpleGrid item xs={12} md={5}>
+                {/* Imagen Eductor */}
+                <Box
+                    sx={{
+                        flex: 1,
+                        textAlign: "center",
+                    }}
+                >
                     <Box
                         component="img"
-                        src="/assets/pages/products/homogenizador/eductor.png"
+                        src="/assets/pages/products/homogenizacion/eductor.png"
                         alt="Eductor"
                         sx={{
-                            width: "100%",
-                            maxHeight: 350,
+                            width: { xs: "60%", md: "50%" },
+                            maxHeight: 300,
                             borderRadius: 2,
                             boxShadow: 3,
                             objectFit: "contain",
                             mb: 2,
                         }}
                     />
-                    <Typography
-                        sx={{
-                            textAlign: "center",
-                            fontWeight: 600,
-                            fontSize: 15,
-                            mt: 1,
-                        }}
-                    >
+                    <Typography sx={{ fontWeight: 600, fontSize: 15 }}>
                         EDUCTOR (Medidas: 1.5” - 3”)
                     </Typography>
                     <Typography
-                        sx={{
-                            textAlign: "center",
-                            fontStyle: "italic",
-                            mt: 1,
-                        }}
+                        sx={{ fontStyle: "italic", mt: 1, color: "#555", px: 2 }}
                     >
-                        Sistema ideal para tanque colector, para evitar la sedimentación.
+                        Sistema ideal para tanque colector, evita sedimentación.
                     </Typography>
-                </SimpleGrid>
+                </Box>
 
-                <SimpleGrid item xs={12} md={7}>
+                {/* Imagen Hexagonal */}
+                <Box
+                    sx={{
+                        flex: 1.2,
+                        textAlign: "center",
+                    }}
+                >
                     <Box
                         component="img"
-                        src="/assets/pages/products/homogenizador/hexagonal.png"
+                        src="/assets/pages/products/homogenizacion/hexagonal.png"
                         alt="Sistema de homogenización hexagonal"
                         sx={{
                             width: "100%",
@@ -122,79 +127,69 @@ export default function Homogenizacion() {
                         }}
                     />
                     <Typography
-                        sx={{
-                            textAlign: "center",
-                            fontStyle: "italic",
-                            fontSize: 14,
-                            mt: 1,
-                        }}
+                        sx={{ fontStyle: "italic", fontSize: 14, mt: 1, color: "#555" }}
                     >
                         Sistema de homogenización por eductores hexagonal
                     </Typography>
-                </SimpleGrid>
-            </SimpleGrid>
+                </Box>
+            </Box>
 
-            {/* Segunda fila: vista pentagonal y tanque */}
-            <SimpleGrid
-                container
-                spacing={2}
-                justifyContent="center"
-                alignItems="center"
-                sx={{ mb: 4, flexDirection: { xs: "column", md: "row" } }}
+            {/* Tres imágenes en fila */}
+            <Box
+                sx={{
+                    display: "flex",
+                    flexDirection: { xs: "column", md: "row" },
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap: { xs: 3, md: 4 },
+                    flexWrap: "wrap",
+                    mb: 2,
+                }}
             >
-                <SimpleGrid item xs={12} md={4}>
-                    <Box
-                        component="img"
-                        src="/assets/pages/products/homogenizador/pentagonal1.png"
-                        alt="Vista pentagonal 1"
-                        sx={{
-                            width: "100%",
-                            maxHeight: 350,
-                            borderRadius: 2,
-                            boxShadow: 3,
-                            objectFit: "contain",
-                        }}
-                    />
-                </SimpleGrid>
+                <Box
+                    component="img"
+                    src="/assets/pages/products/homogenizacion/pentagonal1.png"
+                    alt="Vista pentagonal 1"
+                    sx={{
+                        width: { xs: "90%", md: "30%" },
+                        maxHeight: 280,
+                        borderRadius: 2,
+                        boxShadow: 3,
+                        objectFit: "contain",
+                    }}
+                />
+                <Box
+                    component="img"
+                    src="/assets/pages/products/homogenizacion/pentagonal2.png"
+                    alt="Vista pentagonal 2"
+                    sx={{
+                        width: { xs: "90%", md: "30%" },
+                        maxHeight: 280,
+                        borderRadius: 2,
+                        boxShadow: 3,
+                        objectFit: "contain",
+                    }}
+                />
+                <Box
+                    component="img"
+                    src="/assets/pages/products/homogenizacion/tanque.png"
+                    alt="Tanque ecualizador"
+                    sx={{
+                        width: { xs: "80%", md: "25%" },
+                        maxHeight: 240,
+                        borderRadius: 2,
+                        boxShadow: 3,
+                        objectFit: "contain",
+                    }}
+                />
+            </Box>
 
-                <SimpleGrid item xs={12} md={4}>
-                    <Box
-                        component="img"
-                        src="/assets/pages/products/homogenizador/pentagonal2.png"
-                        alt="Vista pentagonal 2"
-                        sx={{
-                            width: "100%",
-                            maxHeight: 350,
-                            borderRadius: 2,
-                            boxShadow: 3,
-                            objectFit: "contain",
-                        }}
-                    />
-                </SimpleGrid>
-
-                <SimpleGrid item xs={12} md={4}>
-                    <Box
-                        component="img"
-                        src="/assets/pages/products/homogenizador/tanque.png"
-                        alt="Tanque ecualizador"
-                        sx={{
-                            width: "100%",
-                            maxHeight: 350,
-                            borderRadius: 2,
-                            boxShadow: 3,
-                            objectFit: "contain",
-                        }}
-                    />
-                </SimpleGrid>
-            </SimpleGrid>
-
-            {/* Texto final */}
             <Typography
                 align="center"
                 sx={{ mt: 3, fontStyle: "italic", color: "#555" }}
             >
-                Diseño de acuerdo a la capacidad del tanque. Sistema de homogenización por
-                eductores pentagonal.
+                Diseño de acuerdo a la capacidad del tanque. Sistema de homogenización
+                por eductores pentagonal.
             </Typography>
         </Box>
     );
