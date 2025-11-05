@@ -1,3 +1,4 @@
+// noinspection SpellCheckingInspection
 import {
     Card,
     CardActionArea,
@@ -44,7 +45,40 @@ export default function Products() {
             ruta:"/products/decantadores-centrifugos",
             descripcion: "Equipos para la separación de sólidos y líquidos mediante fuerza centrífuga.",
             imagen:"/assets/pages/products/decantadores/polat/decantador1.png"
-        }
+        },
+        {
+            titulo: "Bombas",
+            ruta: "/products/bombas",
+            descripcion: "Bombas industriales para diversas aplicaciones de manejo de fluidos.",
+            imagen: "/assets/pages/products/bombas/k-bomba1.png"
+        },
+        {
+            titulo: "Bombas Verticales Multietapa",
+            ruta: "/products/bombas-verticales",
+            descripcion: "Bombas industriales para diversas aplicaciones de manejo de fluidos.",
+            imagen: "/assets/pages/products/bombas-verticales/bomba1.png"
+        },
+        {
+            titulo: "ElectroBombas Sumergibles Tipo Lapicero",
+            ruta: "/products/electrobombas",
+            descripcion: "Bombas industriales para diversas aplicaciones de manejo de fluidos.",
+            imagen: "/assets/pages/products/electrobombas/ns95.png"
+        },
+        {
+            titulo: "Bomba Nova Rotors",
+            ruta: "/products/bombas-novarotors",
+            descripcion: "Bombas industriales para diversas aplicaciones de manejo de fluidos.",
+            imagen: "/assets/pages/products/novarotors/bomba-nova.png"
+        },
+        {
+            titulo: "Mezcladores Estáticos",
+            ruta:  "/products/mezcladores-estaticos",
+            descripcion: "Bombas industriales para diversas aplicaciones de manejo de fluidos.",
+            imagen: "/assets/pages/products/mezcladores/mixer2.png"
+        },
+
+
+
     ];
 
     return (

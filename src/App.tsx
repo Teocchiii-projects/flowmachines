@@ -12,10 +12,14 @@ import {NotFound} from "./pages/NotFound.tsx";
 import Products from "./pages/Products.tsx";
 import {PlantaDeTratamiento} from "./pages/products/PlantaDeTratamiento.tsx";
 import DecantadoresCentrifugos from "./pages/products/DecantadoresCentrifugos.tsx";
-
 import MaquinaPolimeros from "./pages/products/MaquinaPolimeros.tsx";
 import SistemaSulfatoFerrico from "./pages/products/SistemaSulfatoFerrico.tsx";
 import Homogenizacion from "./pages/products/Homogenizacion.tsx";
+import Bombas from "./pages/products/Bombas.tsx";
+import BombasVerticalesMultietapa from "./pages/products/BombasVerticalesMultietapa.tsx";
+import ElectrobombasSumergibles from "./pages/products/ElectrobombasSumergibles.tsx";
+import BombaNovaRotors from "./pages/products/BombaNovaRotors.tsx";
+import MezcladoresEstaticos from "./pages/products/MezcladoresEstaticos.tsx";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -33,14 +37,15 @@ const router = createBrowserRouter([
             { path: "/products/decantadores-centrifugos", element: <DecantadoresCentrifugos /> },
             { path: "/products/sulfato-ferrico", element: <SistemaSulfatoFerrico /> },
             { path: "/products/homogenizacion-por-eductores", element: <Homogenizacion /> },
+            { path: "/products/bombas", element:<Bombas/>},
+            { path:"/products/bombas-verticales", element:<BombasVerticalesMultietapa/>},
+            { path:"/products/electrobombas", element:<ElectrobombasSumergibles/>},
+            { path:"/products/bombas-novarotors", element:<BombaNovaRotors/>},
+            { path: "/products/mezcladores-estaticos", element:<MezcladoresEstaticos/>},
 
-
-            { path: "/products/bombas-centrifugas-mezcladores-estaticos", element: <Products /> },
-
-
-
-            {path:"/about",element:<AboutUs/>},
-            {path:"*",element:<NotFound/>}
+            //Rutas de apoyo
+            { path: "/about",element:<AboutUs/>},
+            { path: "*",element:<NotFound/>}
 
         ]
     }
